@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Bethel Organic Farm, Dhoni, Palakkad, Kerala, India. Website foundation."
+    />
+    <title>Bethel Organic Farm</title>
+
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+
+    <!-- Firebase SDK is pinned. Upgrade deliberately, not automatically. -->
+    <script type="importmap">
+      {
+        "imports": {
+          "firebase/app": "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js",
+          "firebase/auth": "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js",
+          "firebase/firestore": "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js",
+          "firebase/storage": "https://www.gstatic.com/firebasejs/11.6.0/firebase-storage.js"
+        }
+      }
+    </script>
+    <script type="module" src="/js/pages/home.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="/">Bethel Organic Farm</a>
+        <nav aria-label="Primary">
+          <a class="nav-link" href="/admin/">Staff area</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="shell page-shell" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Dhoni · Palakkad · Kerala · India</p>
+        <h1 id="hero-title">Welcome to Bethel Organic Farm</h1>
+        <p class="hero__lead">
+          This is the verified foundation for the public website. Full content,
+          languages and booking journeys arrive in later stages.
+        </p>
+        <p id="app-status" class="status-card" role="status">
+          Checking site configuration…
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p>Bethel Organic Farm · Dhoni, Palakkad, Kerala, India</p>
+        <p id="footer-languages" class="muted"></p>
+      </div>
+    </footer>
+  </body>
+</html>

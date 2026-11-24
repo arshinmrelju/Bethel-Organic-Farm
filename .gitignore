@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# Local secrets and credentials (never commit these)
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+.secrets/
+*.pem
+*.key
+*.p12
+*service-account*.json
+serviceAccountKey.json
+*-adminsdk*.json
+payment-credentials*
+upi-credentials*
+
+# Local overrides for the browser config placeholder
+public/js/config/firebase-config.local.js
+
+# ---------------------------------------------------------------------------
+# Firebase CLI / emulator output
+# ---------------------------------------------------------------------------
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+*-firebase-debug.log
+ui-debug.log
+emulator-data/
+
+# ---------------------------------------------------------------------------
+# Dependencies and build output
+# ---------------------------------------------------------------------------
+node_modules/
+functions/node_modules/
+dist/
+build/
+coverage/
+functions/lib/
+
+# ---------------------------------------------------------------------------
+# Editor, OS and generated files
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

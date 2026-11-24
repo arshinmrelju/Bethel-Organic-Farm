@@ -1,0 +1,12 @@
+rules_version = '2';
+
+// Foundation rules: no browser uploads or reads are allowed yet.
+// Public website media belongs in Hosting; private media will use controlled
+// paths and role checks in a later stage.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
