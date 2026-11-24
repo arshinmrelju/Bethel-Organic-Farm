@@ -1,47 +1,210 @@
 /*
- * Design tokens only. No photography, business data or final copy lives here.
- * Mood: "Cinematic Wilderness" — forest greens, warm ivory, earthy neutrals.
+ * Bethel Organic Farm — central design tokens
+ * Mood: "Cinematic Wilderness".
+ *
+ * Tokens are grouped by purpose. Components should reference semantic tokens
+ * (for example --color-text) rather than raw palette values where possible.
+ * No photography, logo artwork or business data lives in this file.
  */
 :root {
   color-scheme: light;
 
+  /* ---------------------------------------------------------------------
+   * Colour: deep forest and botanical foundation
+   * ------------------------------------------------------------------- */
+  --color-forest-950: #07130e;
   --color-forest-900: #0b1c15;
   --color-forest-800: #12291f;
   --color-forest-700: #1b3a2c;
   --color-forest-600: #2b4d3c;
+  --color-forest-500: #3c624d;
+  --color-moss-500: #5f7358;
+  --color-moss-300: #9aae98;
 
+  /* Colour: warm ivory and soft stone */
+  --color-ivory-50: #fffdf8;
   --color-ivory-100: #f8f3e9;
   --color-ivory-200: #eee5d5;
+  --color-stone-100: #e7dfd0;
+  --color-stone-200: #d8cfbe;
+  --color-stone-300: #c8bdaa;
   --color-stone-400: #b9b0a1;
+  --color-stone-500: #8e877b;
   --color-stone-600: #6f6a60;
-  --color-clay-600: #8b6a4b;
 
-  --color-ink: #17231c;
-  --color-ink-soft: #46544b;
-  --color-line: rgb(23 35 28 / 0.16);
+  /* Colour: muted earth and restrained natural gold */
+  --color-clay-700: #6e4f35;
+  --color-clay-600: #856343;
+  --color-clay-500: #a27c55;
+  --color-gold-700: #7a5e29;
+  --color-gold-500: #b99555;
+  --color-gold-300: #d8be83;
 
-  --font-display: Georgia, "Times New Roman", serif;
-  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Colour: semantic aliases used by components */
+  --color-text: #17231c;
+  --color-text-muted: #46544b;
+  --color-text-on-dark: var(--color-ivory-100);
+  --color-text-on-dark-soft: #e6d8b8;
 
-  --step-0: 1rem;
-  --step-1: 1.125rem;
-  --step-2: clamp(1.35rem, 2.5vw, 1.75rem);
-  --step-3: clamp(2rem, 5vw, 3.25rem);
+  --color-surface: var(--color-ivory-100);
+  --color-surface-raised: var(--color-ivory-50);
+  --color-surface-sunken: var(--color-ivory-200);
+  --color-surface-dark: var(--color-forest-900);
 
+  --color-border: var(--color-stone-200);
+  --color-border-strong: var(--color-stone-400);
+  --color-focus: var(--color-clay-600);
+
+  --color-primary: var(--color-forest-800);
+  --color-primary-hover: var(--color-forest-700);
+  --color-primary-active: var(--color-forest-900);
+  --color-accent: var(--color-clay-600);
+  --color-accent-strong: var(--color-clay-700);
+  --color-accent-gold: var(--color-gold-700);
+
+  --color-success: #2f6b4f;
+  --color-success-bg: #e7f0e8;
+  --color-warning: #8a6a2f;
+  --color-warning-bg: #f6eedb;
+  --color-error: #8c3b2e;
+  --color-error-bg: #f8e7e1;
+  --color-info: #3d5a6c;
+  --color-info-bg: #e8eef1;
+
+  /* ---------------------------------------------------------------------
+   * Typography
+   * ------------------------------------------------------------------- */
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+    Georgia, "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono",
+    monospace;
+
+  --font-size-2xs: 0.6875rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.0625rem;
+  --font-size-lg: clamp(1.125rem, 0.95rem + 0.5vw, 1.25rem);
+  --font-size-xl: clamp(1.35rem, 1.1rem + 1vw, 1.6rem);
+  --font-size-2xl: clamp(1.75rem, 1.3rem + 1.8vw, 2.25rem);
+  --font-size-3xl: clamp(2.25rem, 1.6rem + 2.8vw, 3.25rem);
+  --font-size-4xl: clamp(2.75rem, 1.8rem + 4vw, 4.25rem);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.08;
+  --line-height-heading: 1.18;
+  --line-height-body: 1.6;
+  --line-height-relaxed: 1.75;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.18em;
+
+  /* ---------------------------------------------------------------------
+   * Spacing
+   * ------------------------------------------------------------------- */
+  --space-0: 0;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
   --space-5: 1.5rem;
   --space-6: 2rem;
-  --space-7: 3rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 4rem;
+  --space-10: 5rem;
+  --space-11: 6rem;
+  --space-12: 8rem;
+  --space-section: clamp(3rem, 6vw, 5.5rem);
+  --space-section-lg: clamp(4rem, 8vw, 7rem);
+  --space-stack: clamp(1rem, 2vw, 1.5rem);
 
-  --radius-sm: 0.35rem;
-  --radius-md: 0.7rem;
-  --shadow-soft: 0 1.25rem 2.5rem rgb(11 28 21 / 0.14);
-  --shell-width: 68rem;
+  /* ---------------------------------------------------------------------
+   * Radii
+   * ------------------------------------------------------------------- */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.4rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-pill: 999px;
+
+  /* ---------------------------------------------------------------------
+   * Shadows
+   * ------------------------------------------------------------------- */
+  --shadow-xs: 0 1px 2px rgb(7 19 14 / 0.08);
+  --shadow-sm: 0 0.35rem 1rem rgb(7 19 14 / 0.1);
+  --shadow-md: 0 1rem 2.25rem rgb(7 19 14 / 0.14);
+  --shadow-lg: 0 1.5rem 3.5rem rgb(7 19 14 / 0.2);
+  --shadow-focus: 0 0 0 3px rgb(185 149 85 / 0.38);
+
+  /* ---------------------------------------------------------------------
+   * Containers
+   * ------------------------------------------------------------------- */
+  --container-sm: 36rem;
+  --container-md: 48rem;
+  --container-lg: 68rem;
+  --container-xl: 80rem;
+  --container-gutter: clamp(1rem, 4vw, 2.5rem);
+
+  /* ---------------------------------------------------------------------
+   * Transitions
+   * ------------------------------------------------------------------- */
+  --duration-instant: 80ms;
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --duration-slow: 360ms;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-colors: color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+  --transition-motion: transform var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+
+  /* ---------------------------------------------------------------------
+   * Z-index layers
+   * ------------------------------------------------------------------- */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-header: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-skip: 600;
+
+  /* ---------------------------------------------------------------------
+   * Breakpoint reference values (used in docs and media-query planning)
+   * ------------------------------------------------------------------- */
+  --breakpoint-sm: 36rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+
+  /* ---------------------------------------------------------------------
+   * Backward-compatible aliases from the foundation scaffold
+   * ------------------------------------------------------------------- */
+  --step-0: var(--font-size-base);
+  --step-1: var(--font-size-md);
+  --step-2: var(--font-size-xl);
+  --step-3: var(--font-size-3xl);
+  --shell-width: var(--container-lg);
+  --shadow-soft: var(--shadow-md);
+  --color-line: var(--color-border);
 }
 
+/* ------------------------------------------------------------------------
+ * Minimal reset and base typography
+ * ---------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -58,11 +221,56 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-ivory-100);
-  color: var(--color-ink);
+  background: var(--color-surface);
+  color: var(--color-text);
   font-family: var(--font-body);
-  font-size: var(--step-0);
-  line-height: 1.6;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-heading);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+p {
+  margin: 0 0 var(--space-4);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 img,
@@ -71,55 +279,26 @@ svg {
   max-width: 100%;
 }
 
-a {
-  color: inherit;
-}
-
-button,
-input {
-  font: inherit;
-}
-
 :focus-visible {
-  outline: 3px solid var(--color-clay-600);
+  outline: 2px solid var(--color-focus);
   outline-offset: 3px;
+  box-shadow: var(--shadow-focus);
 }
 
-/* Shared by public and admin pages. */
-.muted {
-  color: var(--color-ink-soft);
-}
+/* ------------------------------------------------------------------------
+ * Reduced motion: keep every transition calm and optional
+ * ---------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-.status-card {
-  display: inline-block;
-  max-width: 52ch;
-  margin: var(--space-6) 0 0;
-  padding: var(--space-3) var(--space-4);
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-sm);
-  background: rgb(248 243 233 / 0.6);
-  font-size: 0.92rem;
-}
-
-.hero .status-card {
-  border-color: rgb(248 243 233 / 0.24);
-  background: rgb(248 243 233 / 0.08);
-}
-
-.status-card[data-tone="error"] {
-  border-color: #d8a58e;
-  color: #7a3d2a;
-}
-
-.hero .status-card[data-tone="error"] {
-  color: #ffe4d7;
-}
-
-.status-card[data-tone="success"] {
-  border-color: #a9c3a3;
-  color: var(--color-forest-700);
-}
-
-.hero .status-card[data-tone="success"] {
-  color: #e7f2e2;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

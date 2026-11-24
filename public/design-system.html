@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Design System Preview · Bethel Organic Farm</title>
+
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/demo.css" />
+
+    <script type="module" src="/js/demo.js"></script>
+  </head>
+
+  <body class="has-mobile-action">
+    <a class="skip-link" href="#demo-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <span class="wordmark">
+          Bethel Organic Farm
+          <span class="wordmark__note">typographic placeholder · logo pending</span>
+        </span>
+        <span class="badge badge--dark">Internal design-system preview</span>
+      </div>
+    </header>
+
+    <main id="demo-content">
+      <section class="hero demo-hero shell" aria-labelledby="demo-title">
+        <p class="eyebrow eyebrow--inverse">Cinematic Wilderness · v0.1</p>
+        <h1 id="demo-title">Visual language, made inspectable.</h1>
+        <p class="hero__lead">
+          This page demonstrates the tokens and reusable patterns for the public
+          website and the staff area. It is not a customer page. No real farm
+          photography, logo, prices or policies are represented here.
+        </p>
+        <p class="status-card" role="status">
+          Replace every labelled media placeholder only with owner-approved
+          Bethel Organic Farm photography.
+        </p>
+      </section>
+
+      <div class="shell demo-layout">
+        <!-- Tokens ----------------------------------------------------- -->
+        <section class="demo-block" aria-labelledby="tokens-title">
+          <div class="demo-block__head">
+            <h2 id="tokens-title">Colour tokens</h2>
+            <p class="section__lead">
+              Forest first, ivory for calm reading, earth and gold used sparingly.
+              Semantic aliases are preferred in components.
+            </p>
+          </div>
+
+          <div class="token-grid">
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-forest-950)"></span>
+              <span>--color-forest-950</span><code class="demo-code">#07130E</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-forest-900)"></span>
+              <span>--color-forest-900</span><code class="demo-code">#0B1C15</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-forest-800)"></span>
+              <span>--color-forest-800</span><code class="demo-code">#12291F</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-forest-700)"></span>
+              <span>--color-forest-700</span><code class="demo-code">#1B3A2C</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-moss-500)"></span>
+              <span>--color-moss-500</span><code class="demo-code">#5F7358</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-ivory-100)"></span>
+              <span>--color-ivory-100</span><code class="demo-code">#F8F3E9</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-stone-200)"></span>
+              <span>--color-stone-200</span><code class="demo-code">#D8CFBE</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-clay-600)"></span>
+              <span>--color-clay-600</span><code class="demo-code">#856343</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-gold-500)"></span>
+              <span>--color-gold-500</span><code class="demo-code">#B99555</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-success)"></span>
+              <span>--color-success</span><code class="demo-code">#2F6B4F</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-warning)"></span>
+              <span>--color-warning</span><code class="demo-code">#8A6A2F</code>
+            </div>
+            <div class="token-swatch">
+              <span class="token-swatch__chip" style="--swatch: var(--color-error)"></span>
+              <span>--color-error</span><code class="demo-code">#8C3B2E</code>
+            </div>
+          </div>
+
+          <div class="alert alert--success" role="note">
+            <span>
+              Contrast checked: body text 14.7:1, muted text 7.2:1, clay links
+              4.9:1 and ivory on forest 15.9:1. Decorative gold is not used for
+              small text on ivory.
+            </span>
+          </div>
+        </section>
+
+        <section class="demo-block" aria-labelledby="type-title">
+          <div class="demo-block__head">
+            <h2 id="type-title">Typography</h2>
+            <p class="section__lead">
+              Editorial display face for headings, highly readable interface
+              face for everything else. No web font is required.
+            </p>
+          </div>
+
+          <div class="type-specimen">
+            <p class="eyebrow">Eyebrow · uppercase · letter-spaced</p>
+            <h1>Display heading one</h1>
+            <h2>Editorial heading two</h2>
+            <h3>Section heading three</h3>
+            <h4>Card heading four</h4>
+            <p class="section__lead">
+              Lead copy uses the body face at a larger size and relaxed line
+              height for calm reading.
+            </p>
+            <p>
+              Body copy is set in the interface font. It is tuned for long-form
+              hospitality descriptions, operational notes and form guidance.
+            </p>
+            <p class="small-note">Small note · used for hints and secondary context.</p>
+            <code class="demo-code">--font-mono: ui-monospace, SFMono-Regular, Consolas, monospace</code>
+          </div>
+        </section>
+
+        <section class="demo-block" aria-labelledby="scale-title">
+          <div class="demo-block__head">
+            <h2 id="scale-title">Spacing, radii and shadows</h2>
+            <p class="section__lead">
+              A four-pixel-based rhythm, gentle corner rounding and shadows
+              that stay close to the surface.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__content">
+              <div class="space-row"><span>--space-1</span><span class="space-bar" style="--bar: var(--space-1)"></span><code class="demo-code">0.25rem</code></div>
+              <div class="space-row"><span>--space-2</span><span class="space-bar" style="--bar: var(--space-2)"></span><code class="demo-code">0.5rem</code></div>
+              <div class="space-row"><span>--space-3</span><span class="space-bar" style="--bar: var(--space-3)"></span><code class="demo-code">0.75rem</code></div>
+              <div class="space-row"><span>--space-4</span><span class="space-bar" style="--bar: var(--space-4)"></span><code class="demo-code">1rem</code></div>
+              <div class="space-row"><span>--space-5</span><span class="space-bar" style="--bar: var(--space-5)"></span><code class="demo-code">1.5rem</code></div>
+              <div class="space-row"><span>--space-6</span><span class="space-bar" style="--bar: var(--space-6)"></span><code class="demo-code">2rem</code></div>
+              <div class="space-row"><span>--space-8</span><span class="space-bar" style="--bar: var(--space-8)"></span><code class="demo-code">3rem</code></div>
+            </div>
+          </div>
+
+          <div class="shape-row">
+            <div class="shape-card" style="--demo-radius: var(--radius-sm); --demo-shadow: var(--shadow-xs)">radius-sm · shadow-xs</div>
+            <div class="shape-card" style="--demo-radius: var(--radius-md); --demo-shadow: var(--shadow-sm)">radius-md · shadow-sm</div>
+            <div class="shape-card" style="--demo-radius: var(--radius-lg); --demo-shadow: var(--shadow-md)">radius-lg · shadow-md</div>
+            <div class="shape-card" style="--demo-radius: var(--radius-pill); --demo-shadow: var(--shadow-lg)">radius-pill · shadow-lg</div>
+          </div>
+        </section>
+
+        <section class="demo-block" aria-labelledby="motion-title">
+          <div class="demo-block__head">
+            <h2 id="motion-title">Motion and layers</h2>
+            <p class="section__lead">
+              Short durations, gentle easing and explicit stacking layers.
+              Reduced-motion preferences remove animation entirely.
+            </p>
+          </div>
+
+          <table class="demo-table">
+            <thead>
+              <tr><th>Token group</th><th>Values</th><th>Use</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Durations</td><td>80 / 140 / 220 / 360ms</td><td>instant, fast, base, slow</td></tr>
+              <tr><td>Easing</td><td>standard, out</td><td>colour changes and small movement</td></tr>
+              <tr><td>Z-index</td><td>0 → 600</td><td>base, sticky, header, modal, skip link</td></tr>
+              <tr><td>Breakpoints</td><td>36 / 48 / 64 / 80rem</td><td>small, medium, large, wide</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Components ------------------------------------------------- -->
+        <section class="demo-block" aria-labelledby="buttons-title">
+          <div class="demo-block__head">
+            <h2 id="buttons-title">Buttons and links</h2>
+            <p class="section__lead">
+              Hover lifts by one pixel; active settles; disabled and loading
+              states never invite a second click.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card__content">
+              <div class="button-group">
+                <button class="button" type="button">Primary action</button>
+                <button class="button button--secondary" type="button">Secondary action</button>
+                <button class="button button--ghost" type="button">Ghost action</button>
+                <button class="button button--small" type="button">Small action</button>
+                <button class="button is-loading" type="button" disabled aria-busy="true">Loading</button>
+                <button class="button" type="button" disabled>Disabled</button>
+                <button class="button" type="button" data-demo-loading>Demo loading state</button>
+              </div>
+              <p id="demo-status" class="status-card" role="status">
+                Press “Demo loading state” to see a temporary busy state.
+              </p>
+            </div>
+          </div>
+
+          <div class="demo-dark">
+            <h3>Inverse actions on forest</h3>
+            <p>
+              Inverse links and buttons are used only on dark botanical
+              surfaces.
+            </p>
+            <div class="button-group">
+              <button class="button button--inverse" type="button">Ivory action</button>
+              <a class="text-link text-link--inverse" href="#tokens-title">Inverse text link</a>
+            </div>
+          </div>
+
+          <p>
+            Inline links:
+            <a class="text-link" href="#type-title">accent link</a>
+            and
+            <a class="text-link text-link--quiet" href="#scale-title">quiet link</a>.
+          </p>
+        </section>
+
+        <section class="demo-block" aria-labelledby="forms-title">
+          <div class="demo-block__head">
+            <h2 id="forms-title">Form fields and states</h2>
+            <p class="section__lead">
+              Labels are always visible. Error and success states use colour
+              plus text, never colour alone.
+            </p>
+          </div>
+
+          <div class="demo-grid demo-grid--forms">
+            <form class="card" aria-label="Default field example">
+              <div class="card__content">
+                <p class="card__meta">Default</p>
+                <div class="field">
+                  <label class="field__label" for="demo-default">Email</label>
+                  <input class="field__control" id="demo-default" type="email" placeholder="name@example.com" />
+                  <span class="field__hint">Used only after the owner supplies contact setup.</span>
+                </div>
+              </div>
+            </form>
+
+            <form class="card" aria-label="Error field example">
+              <div class="card__content">
+                <p class="card__meta">Error</p>
+                <div class="field is-invalid">
+                  <label class="field__label" for="demo-error">Email</label>
+                  <input class="field__control" id="demo-error" type="email" value="not-an-email" aria-invalid="true" />
+                  <span class="field__error">Enter a valid email address.</span>
+                </div>
+              </div>
+            </form>
+
+            <form class="card" aria-label="Disabled and valid field example">
+              <div class="card__content">
+                <p class="card__meta">Valid and disabled</p>
+                <div class="field is-valid">
+                  <label class="field__label" for="demo-valid">Verified value</label>
+                  <input class="field__control" id="demo-valid" value="Looks correct" readonly />
+                  <span class="field__hint">Success state.</span>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="demo-disabled">Unavailable field</label>
+                  <input class="field__control" id="demo-disabled" value="Disabled" disabled />
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="demo-block" aria-labelledby="cards-title">
+          <div class="demo-block__head">
+            <h2 id="cards-title">Cards and image placeholders</h2>
+            <p class="section__lead">
+              Layout testing uses labelled CSS placeholders. No stock or
+              generated imagery is used, and nothing here depicts the property.
+            </p>
+          </div>
+
+          <div class="alert alert--warning" role="note">
+            <span>
+              Placeholder media must be replaced with genuine, owner-approved
+              Bethel Organic Farm photographs before launch.
+            </span>
+          </div>
+
+          <div class="demo-grid demo-grid--wide">
+            <article class="card card--interactive">
+              <div class="media-placeholder media-placeholder--landscape" role="img" aria-label="Placeholder for a future landscape photograph">
+                <span class="media-placeholder__label">Placeholder · genuine farm photography pending</span>
+              </div>
+              <div class="card__content">
+                <p class="card__meta">Public experience card</p>
+                <h3 class="card__title">Editorial card title</h3>
+                <p class="card__text">
+                  Cards use generous padding and a quiet border. Content here is
+                  structural only.
+                </p>
+                <div class="card__actions">
+                  <a class="text-link" href="#demo-content">Read more</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--quiet">
+              <div class="media-placeholder media-placeholder--square" role="img" aria-label="Placeholder for a future square photograph">
+                <span class="media-placeholder__label">Placeholder · genuine farm photography pending</span>
+              </div>
+              <div class="card__content">
+                <p class="card__meta">Quiet variant</p>
+                <h3 class="card__title">Secondary card title</h3>
+                <p class="card__text">
+                  The quiet card removes elevation for dense, calm groupings.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="demo-block" aria-labelledby="feedback-title">
+          <div class="demo-block__head">
+            <h2 id="feedback-title">Badges and status messages</h2>
+            <p class="section__lead">
+              Compact labels and inline status blocks for public and operational
+              contexts.
+            </p>
+          </div>
+
+          <div class="button-group">
+            <span class="badge">Neutral</span>
+            <span class="badge badge--gold">Gold</span>
+            <span class="badge badge--success">Verified</span>
+            <span class="badge badge--warning">Pending</span>
+            <span class="badge badge--error">Attention</span>
+            <span class="badge badge--dark">On forest</span>
+          </div>
+
+          <div class="demo-grid demo-grid--wide">
+            <div class="alert">Informational note with a neutral left edge.</div>
+            <div class="alert alert--success">Payment verified by an authorised staff member.</div>
+            <div class="alert alert--warning">Details awaited from the owner.</div>
+            <div class="alert alert--error">Action required: configuration is incomplete.</div>
+          </div>
+        </section>
+
+        <section class="demo-block" aria-labelledby="nav-title">
+          <div class="demo-block__head">
+            <h2 id="nav-title">Navigation patterns</h2>
+            <p class="section__lead">
+              Public navigation is spacious and hospitality-led. Staff
+              navigation is compact and task-led.
+            </p>
+          </div>
+
+          <div class="demo-dark">
+            <nav class="site-nav" aria-label="Public navigation example">
+              <ul class="site-nav__list">
+                <li><a class="site-nav__link" href="#demo-content" aria-current="page">Overview</a></li>
+                <li><a class="site-nav__link" href="#cards-title">Experiences</a></li>
+                <li><a class="site-nav__link" href="#forms-title">Enquire</a></li>
+                <li><a class="site-nav__link" href="#nav-title">Staff area</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="demo-grid">
+            <aside class="admin-sidebar" aria-label="Staff navigation example">
+              <p class="admin-sidebar__title">Staff navigation</p>
+              <nav class="admin-nav" aria-label="Example staff sections">
+                <ul class="admin-nav__list">
+                  <li><a class="admin-nav__link" href="#nav-title" aria-current="page">Overview</a></li>
+                  <li><a class="admin-nav__link" href="#forms-title">Bookings</a></li>
+                  <li><a class="admin-nav__link" href="#cards-title">Inventory</a></li>
+                  <li><a class="admin-nav__link" href="#feedback-title">Payments</a></li>
+                </ul>
+              </nav>
+            </aside>
+            <div class="admin-panel" aria-label="Admin panel example">
+              <div class="admin-panel__head">
+                <h3>Panel heading</h3>
+                <span class="badge">Staff</span>
+              </div>
+              <div class="admin-panel__body">
+                <p class="muted">
+                  Admin panels use tighter padding and smaller type than public
+                  cards. They avoid dashboard clichés and heavy elevation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="demo-block" aria-labelledby="admin-title">
+          <div class="demo-block__head">
+            <h2 id="admin-title">Operational patterns</h2>
+            <p class="section__lead">
+              Reserved shapes for later dashboards. Values stay blank until
+              verified data exists.
+            </p>
+          </div>
+
+          <div class="demo-admin-mock">
+            <div class="admin-stats">
+              <div class="admin-stat">
+                <span class="admin-stat__label">Reservations today</span>
+                <span class="admin-stat__value">—</span>
+              </div>
+              <div class="admin-stat">
+                <span class="admin-stat__label">Awaiting verification</span>
+                <span class="admin-stat__value">—</span>
+              </div>
+              <div class="admin-stat">
+                <span class="admin-stat__label">Day visitors</span>
+                <span class="admin-stat__value">—</span>
+              </div>
+            </div>
+
+            <div class="admin-panel">
+              <div class="admin-panel__head">
+                <h3>Reservation list</h3>
+                <span class="badge badge--warning">Awaiting verified data</span>
+              </div>
+              <div class="admin-panel__body admin-empty-state">
+                No records are shown in the design system. Booking data will be
+                added only after the approved workflow exists.
+              </div>
+            </div>
+
+            <table class="admin-table">
+              <thead>
+                <tr><th>Reference</th><th>Service</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>—</td><td>—</td><td><span class="badge">Pending setup</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="demo-block" aria-labelledby="responsive-title">
+          <div class="demo-block__head">
+            <h2 id="responsive-title">Responsive behaviour</h2>
+            <p class="section__lead">
+              Mobile first at 36rem, tablet at 48rem, desktop at 64rem and wide
+              desktop at 80rem. Booking actions become a fixed, thumb-reachable
+              bar on small screens.
+            </p>
+          </div>
+
+          <table class="demo-table">
+            <thead>
+              <tr><th>Band</th><th>Width</th><th>Behaviour</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Mobile</td><td>below 48rem</td><td>Single column, 48px minimum actions, fixed action bar</td></tr>
+              <tr><td>Tablet</td><td>48–63.99rem</td><td>Two- or three-column grids, compact admin navigation</td></tr>
+              <tr><td>Desktop</td><td>64rem and above</td><td>Full container, persistent admin sidebar</td></tr>
+              <tr><td>Wide</td><td>80rem and above</td><td>Maximum container keeps editorial line length</td></tr>
+            </tbody>
+          </table>
+
+          <div class="alert" role="note">
+            <span>
+              The bar fixed to the bottom of this preview is a demo only. It is
+              disabled because booking is not part of this stage.
+            </span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="mobile-action-bar" role="note" aria-label="Mobile action example">
+      <button class="button button--block" type="button" disabled>
+        Booking action · demo only
+      </button>
+    </div>
+  </body>
+</html>

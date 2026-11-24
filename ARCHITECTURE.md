@@ -30,7 +30,8 @@ is possible while later stages are designed.
 | Firebase | `public/js/firebase/initialize.js` | One shared Firebase app instance |
 | Config | `public/js/config/firebase-config.js` | Public placeholders and confirmed site facts |
 | UI helpers | `public/js/ui/` | Small reusable presentation helpers |
-| Styling | `public/css/tokens.css`, `site.css`, `admin.css` | Tokens plus page-specific styles |
+| Styling | `public/css/tokens.css`, `components.css`, `site.css`, `admin.css` | Tokens, shared patterns and page composition |
+| Design preview | `public/design-system.html`, `css/demo.css`, `js/demo.js` | Internal token/component catalogue |
 | Assets | `public/assets/` | Owner-approved static media only |
 
 Add a new public page by creating an HTML file and a matching small module in
@@ -40,10 +41,11 @@ on one page or one helper.
 
 ### 2.3 Styling direction
 
-`tokens.css` defines the “Cinematic Wilderness” palette: deep forest greens,
-warm ivory, stone neutrals and a clay accent, with serif display typography and
-system body typography. Effects are created with CSS gradients and spacing, not
-stock photography. No testimonials, photos or brand assets are committed.
+`tokens.css` defines the “Cinematic Wilderness” palette and scale;
+`components.css` provides the reusable public and admin patterns. The full
+inventory lives in [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) and is demonstrated
+at `/design-system.html`. Effects are created with CSS gradients and spacing,
+not stock photography. No testimonials, photos or brand assets are committed.
 
 ### 2.4 Internationalisation (planned)
 

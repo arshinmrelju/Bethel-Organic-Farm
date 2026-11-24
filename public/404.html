@@ -6,16 +6,21 @@
     <meta name="robots" content="noindex" />
     <title>Page not found · Bethel Organic Farm</title>
     <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/site.css" />
   </head>
 
   <body>
-    <main class="shell page-shell">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <main id="main-content" class="shell page-shell" tabindex="-1">
       <section class="hero" aria-labelledby="not-found-title">
-        <p class="eyebrow">404</p>
+        <p class="eyebrow eyebrow--inverse">404</p>
         <h1 id="not-found-title">This page was not found</h1>
         <p class="hero__lead">The page may have moved or may not exist yet.</p>
-        <a class="button-link" href="/">Return to the home page</a>
+        <div class="hero__actions">
+          <a class="button button--inverse" href="/">Return to the home page</a>
+        </div>
       </section>
     </main>
   </body>

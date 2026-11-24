@@ -1,54 +1,62 @@
+/*
+ * Staff-area styling.
+ * Deliberately compact and operational: smaller type, tighter padding and
+ * quiet surfaces. Shared primitives still come from components.css.
+ */
+
 .admin-body {
-  background:
-    linear-gradient(180deg, var(--color-forest-800) 0 13rem, transparent 13rem),
-    var(--color-ivory-100);
+  background: var(--color-surface-sunken);
 }
 
-.admin-header {
-  color: var(--color-ivory-100);
+.admin-signin {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: var(--space-5);
 }
 
-.admin-header__inner {
+.admin-signin__panel {
+  width: min(100%, var(--container-sm));
+}
+
+.admin-signin__intro {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.admin-signin__intro h1 {
+  font-size: var(--font-size-2xl);
+}
+
+.admin-signin__body {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.admin-signin__body .button {
+  width: 100%;
+}
+
+.admin-role-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.admin-topbar__meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  min-height: 4.5rem;
+  gap: var(--space-3);
 }
 
-.badge {
-  display: inline-block;
-  padding: var(--space-1) var(--space-3);
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.admin-main {
-  padding-block: var(--space-6);
-}
-
+/* Backward-compatible aliases from the foundation scaffold. */
 .admin-card {
-  max-width: 34rem;
-  margin-inline: auto;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: var(--color-ivory-100);
-  box-shadow: var(--shadow-soft);
-}
-
-.admin-card h1 {
-  margin: 0 0 var(--space-2);
-  font-family: var(--font-display);
-  font-size: var(--step-2);
-  font-weight: 400;
-}
-
-.admin-card .muted {
-  margin: 0;
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-xs);
 }
 
 .stack {
@@ -57,40 +65,8 @@
   margin-top: var(--space-5);
 }
 
-.stack label {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.stack input {
-  width: 100%;
-  padding: var(--space-3);
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-sm);
-  background: #fff;
-  color: var(--color-ink);
-}
-
-button {
-  cursor: pointer;
-  padding: var(--space-3) var(--space-5);
-  border: 1px solid var(--color-forest-800);
-  border-radius: var(--radius-sm);
-  background: var(--color-forest-800);
-  color: var(--color-ivory-100);
-}
-
-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
 .button-secondary {
-  background: transparent;
-  color: var(--color-forest-800);
-}
-
-.small-note {
-  font-size: 0.82rem;
-  color: var(--color-ink-soft);
+  --button-bg: transparent;
+  --button-fg: var(--color-primary);
+  --button-border: var(--color-border-strong);
 }

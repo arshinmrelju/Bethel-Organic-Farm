@@ -12,8 +12,8 @@ Nothing below should begin automatically after approval of the foundation.
 | Stage | Proposed prompt-pack topic | Outcome | Depends on | Status |
 | --- | --- | --- | --- | --- |
 | 0 | Foundation and guardrails | Folder structure, starter pages, placeholders, deny-all rules, docs | — | **Complete** |
-| 1 | Visual system and design tokens | Final Cinematic Wilderness palette, typography, spacing, motion rules and reusable components | Owner approval of visual direction | Not started |
-| 2 | Public information architecture | Home, stays, camping, dining, experiences, day visits, location and enquiry page shells | Owner-supplied copy and approved media | Not started |
+| 1 | Visual system and design tokens | Cinematic Wilderness palette, typography, spacing, motion rules, reusable components and preview page built | Owner approval of visual direction | **Complete — approval pending** |
+| 2 | Public information architecture | Home, stays, camping, dining, experiences, day visits, location and enquiry page shells | Stage 1 approval; owner-supplied copy and approved media | Not started |
 | 3 | Multi-language foundation | `en`, `ml`, `ta`, `hi` dictionaries, language switcher, translated navigation and status strings | Stage 2 content keys; translation review | Not started |
 | 4 | Contact and WhatsApp enquiry handoff | Verified contact block, optional WhatsApp link builder, no automation | Owner-supplied contact details | Not started |
 | 5 | Firebase Auth and staff roles | Console setup, manual staff creation, custom claims for Owner / Reception / Restaurant, audit-ready sign-in | Stage 0 config; owner staff list | Not started |

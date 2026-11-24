@@ -37,6 +37,7 @@ See [ROADMAP.md](./ROADMAP.md) for the remaining stages.
 ├── .firebaserc                 # Firebase project alias (placeholder)
 ├── .gitignore                  # Secrets, dependencies and generated output
 ├── ARCHITECTURE.md             # Systems, boundaries and workflows
+├── DESIGN_SYSTEM.md            # Tokens, components and responsive decisions
 ├── ROADMAP.md                  # Remaining implementation stages
 ├── README.md                   # This file
 ├── firebase.json               # Hosting, Firestore rules and Storage rules
@@ -47,15 +48,18 @@ See [ROADMAP.md](./ROADMAP.md) for the remaining stages.
 │   └── README.md               # Reserved for Cloud Functions
 └── public/
     ├── 404.html
+    ├── design-system.html      # Internal token/component preview
     ├── index.html              # Public home page
     ├── admin/
     │   └── index.html          # Staff sign-in shell
     ├── assets/
     │   └── README.md           # No media committed yet
     ├── css/
-    │   ├── tokens.css          # Design tokens and minimal reset
-    │   ├── site.css            # Public page styles
-    │   └── admin.css           # Staff area styles
+    │   ├── tokens.css          # Central design tokens and reset
+    │   ├── components.css      # Reusable public and admin patterns
+    │   ├── site.css            # Public page composition
+    │   ├── admin.css           # Staff area composition
+    │   └── demo.css            # Design-system preview layout
     └── js/
         ├── config/
         │   └── firebase-config.js
@@ -65,6 +69,7 @@ See [ROADMAP.md](./ROADMAP.md) for the remaining stages.
         │   └── home.js         # Public home page entry point
         ├── admin/
         │   └── dashboard.js    # Staff sign-in entry point
+        ├── demo.js             # Loading-state demonstration
         └── ui/
             └── status.js       # Shared status message helper
 ```
@@ -93,7 +98,9 @@ See [ROADMAP.md](./ROADMAP.md) for the remaining stages.
 
 2. Open <http://localhost:8080/> for the public shell.
 3. Open <http://localhost:8080/admin/> for the staff shell.
-4. Confirm the pages load and show the “starter mode” notice. This means the
+4. Open <http://localhost:8080/design-system.html> for the internal design
+   preview. It is intentionally marked `noindex` and is not a customer page.
+5. Confirm the pages load and show the “starter mode” notice. This means the
    module structure and styling work without any Firebase project attached.
 
 No npm install or build step is required for the frontend at this stage.
@@ -160,13 +167,15 @@ implemented.
 
 ## Next steps
 
-Read [ARCHITECTURE.md](./ARCHITECTURE.md) for the planned system boundaries and
-[ROADMAP.md](./ROADMAP.md) for the order of remaining work. Do not begin the
-next stage until the owner approves this foundation and supplies the missing
-inputs listed below.
+Read [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) for the visual tokens and reusable
+patterns, [ARCHITECTURE.md](./ARCHITECTURE.md) for the planned system
+boundaries, and [ROADMAP.md](./ROADMAP.md) for the order of remaining work. Do
+not begin the next stage until the owner approves this foundation and the
+design system, and supplies the missing inputs listed below.
 
 ## Decisions needed from the owner
 
+- Approval of the palette, typography and component density in the design system.
 - Verified phone/email and the exact WhatsApp number or link.
 - UPI details and the manual verification process, kept out of the repository
   until a secure approach is agreed.

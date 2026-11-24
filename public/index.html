@@ -10,6 +10,7 @@
     <title>Bethel Organic Farm</title>
 
     <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/site.css" />
 
     <!-- Firebase SDK is pinned. Upgrade deliberately, not automatically. -->
@@ -31,16 +32,20 @@
 
     <header class="site-header">
       <div class="shell site-header__inner">
-        <a class="brand" href="/">Bethel Organic Farm</a>
-        <nav aria-label="Primary">
-          <a class="nav-link" href="/admin/">Staff area</a>
+        <a class="wordmark" href="/">Bethel Organic Farm</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="/admin/">Staff area</a></li>
+          </ul>
         </nav>
       </div>
     </header>
 
     <main id="main-content" class="shell page-shell" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">Dhoni · Palakkad · Kerala · India</p>
+        <p class="eyebrow eyebrow--inverse">
+          Dhoni · Palakkad · Kerala · India
+        </p>
         <h1 id="hero-title">Welcome to Bethel Organic Farm</h1>
         <p class="hero__lead">
           This is the verified foundation for the public website. Full content,
@@ -49,6 +54,9 @@
         <p id="app-status" class="status-card" role="status">
           Checking site configuration…
         </p>
+        <div class="hero__actions">
+          <span class="badge badge--dark">Foundation preview</span>
+        </div>
       </section>
     </main>
 

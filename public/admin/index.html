@@ -7,6 +7,7 @@
     <title>Staff Area · Bethel Organic Farm</title>
 
     <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/admin.css" />
 
     <script type="importmap">
@@ -25,56 +26,102 @@
   <body class="admin-body">
     <a class="skip-link" href="#admin-content">Skip to content</a>
 
-    <header class="admin-header">
-      <div class="shell admin-header__inner">
-        <a class="brand" href="/">Bethel Organic Farm</a>
-        <span class="badge">Staff area</span>
-      </div>
-    </header>
-
-    <main id="admin-content" class="shell admin-main" tabindex="-1">
-      <div class="admin-card">
-        <h1>Staff sign in</h1>
-        <p class="muted">
-          Accounts are created by the owner in Firebase Authentication. There
-          is no public sign-up.
+    <div class="admin-shell">
+      <aside class="admin-sidebar" aria-label="Staff navigation">
+        <p class="admin-sidebar__title">
+          Bethel Organic Farm
+          <span class="visually-hidden">— typographic wordmark placeholder</span>
         </p>
+        <nav class="admin-nav" aria-label="Staff">
+          <ul class="admin-nav__list">
+            <li>
+              <a class="admin-nav__link" href="/admin/" aria-current="page">
+                Sign in
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-        <p id="auth-message" class="status-card" role="status">
-          Checking authentication configuration…
-        </p>
+      <div class="admin-main">
+        <header class="admin-topbar">
+          <span class="badge badge--gold">Operations</span>
+          <span class="small-note">Internal use only</span>
+        </header>
 
-        <form id="sign-in-form" class="stack" hidden>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="username" required />
+        <main id="admin-content" class="admin-content" tabindex="-1">
+          <section class="admin-panel admin-signin__panel" aria-labelledby="signin-title">
+            <div class="admin-panel__head">
+              <h1 id="signin-title">Staff sign in</h1>
+              <span class="badge">Restricted</span>
+            </div>
 
-          <label for="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            autocomplete="current-password"
-            required
-          />
+            <div class="admin-panel__body admin-signin__body">
+              <p class="muted">
+                Accounts are created by the owner in Firebase Authentication.
+                There is no public sign-up.
+              </p>
 
-          <button type="submit">Sign in</button>
-        </form>
+              <p id="auth-message" class="status-card" role="status">
+                Checking authentication configuration…
+              </p>
 
-        <section id="signed-in-panel" class="stack" hidden aria-live="polite">
-          <p class="muted">Signed in as <span id="user-email"></span></p>
-          <p>
-            Role shown for convenience:
-            <span id="user-role" class="badge">unassigned</span>
-          </p>
-          <p class="small-note">
-            This label is not the security boundary. Firestore rules and Cloud
-            Functions decide what each role may actually do.
-          </p>
-          <button id="sign-out-button" type="button" class="button-secondary">
-            Sign out
-          </button>
-        </section>
+              <form id="sign-in-form" class="form form--compact" hidden>
+                <div class="field">
+                  <label class="field__label" for="email">Email</label>
+                  <input
+                    class="field__control"
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="username"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="password">Password</label>
+                  <input
+                    class="field__control"
+                    id="password"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                  />
+                </div>
+
+                <button class="button button--block" type="submit">Sign in</button>
+              </form>
+
+              <section
+                id="signed-in-panel"
+                class="admin-signin__body"
+                hidden
+                aria-live="polite"
+              >
+                <p class="muted">Signed in as <span id="user-email"></span></p>
+                <p class="admin-role-line">
+                  Role shown for convenience:
+                  <span id="user-role" class="badge badge--gold">unassigned</span>
+                </p>
+                <p class="small-note">
+                  This label is not the security boundary. Firestore rules and
+                  Cloud Functions decide what each role may actually do.
+                </p>
+                <button
+                  id="sign-out-button"
+                  type="button"
+                  class="button button--secondary button--small"
+                >
+                  Sign out
+                </button>
+              </section>
+            </div>
+          </section>
+        </main>
       </div>
-    </main>
+    </div>
   </body>
 </html>
