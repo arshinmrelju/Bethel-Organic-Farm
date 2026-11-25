@@ -4,24 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
-    <title>Page not found · Bethel Organic Farm</title>
+    <title>Page not found | Bethel Organic Farm</title>
+    <meta
+      name="description"
+      content="The requested page could not be found on the Bethel Organic Farm prototype."
+    />
+    <link rel="canonical" href="https://example.com/404.html" />
+
     <link rel="stylesheet" href="/css/tokens.css" />
     <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+
+    <script type="module" src="/js/pages/site.js"></script>
   </head>
 
-  <body>
+  <body class="has-mobile-action">
     <a class="skip-link" href="#main-content">Skip to content</a>
+    <div data-site-header></div>
 
     <main id="main-content" class="shell page-shell" tabindex="-1">
-      <section class="hero" aria-labelledby="not-found-title">
+      <section class="page-hero" aria-labelledby="not-found-title">
         <p class="eyebrow eyebrow--inverse">404</p>
         <h1 id="not-found-title">This page was not found</h1>
-        <p class="hero__lead">The page may have moved or may not exist yet.</p>
-        <div class="hero__actions">
+        <p class="page-hero__lead">
+          The page may have moved, or it may not be part of this prototype.
+        </p>
+        <div class="cta-row">
           <a class="button button--inverse" href="/">Return to the home page</a>
+          <a class="button button--inverse-outline" href="/contact.html">
+            Contact the farm
+          </a>
         </div>
       </section>
     </main>
+
+    <div data-site-footer></div>
+    <div data-mobile-actions></div>
   </body>
 </html>
