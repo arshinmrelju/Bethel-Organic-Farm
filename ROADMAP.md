@@ -1,47 +1,15 @@
 # Implementation roadmap
 
-## How to read this
+The prompt pack defines nine reviewable stages. Complete and review one stage at a time.
 
-Stage 0 is complete in this repository. The later stage names below are an
-architect’s proposed mapping of the remaining prompt pack. The exact prompt
-titles and order were not supplied with the foundation prompt, so confirm this
-sequence with the owner before starting any later stage.
+1. **Foundation and repository setup** — project shell, documentation, safe placeholders, and roadmap. *(Complete.)*
+2. **Visual identity and design system** — forest, ivory, leaf, earth, and muted-gold tokens; accessible reusable components; responsive rules; and public/admin demo pages. *(Complete.)* Use labelled abstract layout placeholders until genuine farm photos are supplied.
+3. **Public website** — home, about, stay, experiences, restaurant, packages, gallery, reviews, contact/directions, FAQ, and SEO foundations. *(Complete.)* Keep unknown business content editable and marked for owner input.
+4. **Booking journey** — stay/day visit/camping/experience selection, validation, combined reservation summary, and pending manual-payment states using development-only data. *(Complete.)*
+5. **Firebase backend and security** — approved data model, trusted functions, default-deny rules, inventory concurrency controls, and setup documentation. *(Complete; emulator rule suite pending dependency download.)*
+6. **UPI and refund administration** — configurable direct UPI instructions, manual verification workflow, audit history, and owner-configured refund rules. *(Complete.)*
+7. **Admin and staff operations** — role-scoped dashboards, booking and service operations, payment/refund tools, settings, and reports. *(Complete.)*
+8. **Multilingual content and notifications** — English, Malayalam, Tamil, and Hindi interface support; provider-agnostic notification structure. Keep WhatsApp automation out of scope unless separately approved. *(Complete.)*
+9. **Quality, deployment, and launch readiness** — accessibility, security, responsive, and workflow verification; owner checklist and deployment guidance. Do not deploy without explicit approval. *(Readiness review and launch checklist prepared; approval still required.)*
 
-Nothing below should begin automatically after approval of the foundation.
-
-| Stage | Proposed prompt-pack topic | Outcome | Depends on | Status |
-| --- | --- | --- | --- | --- |
-| 0 | Foundation and guardrails | Folder structure, starter pages, placeholders, deny-all rules, docs | — | **Complete** |
-| 1 | Visual system and design tokens | Cinematic Wilderness palette, typography, spacing, motion rules, reusable components and preview page built | Owner approval of visual direction | **Complete — approval pending** |
-| 2 | Public information architecture | Home, stays, camping, dining, experiences, day visits, location and enquiry page shells | Stage 1 approval; owner-supplied copy and approved media | Not started |
-| 3 | Multi-language foundation | `en`, `ml`, `ta`, `hi` dictionaries, language switcher, translated navigation and status strings | Stage 2 content keys; translation review | Not started |
-| 4 | Contact and WhatsApp enquiry handoff | Verified contact block, optional WhatsApp link builder, no automation | Owner-supplied contact details | Not started |
-| 5 | Firebase Auth and staff roles | Console setup, manual staff creation, custom claims for Owner / Reception / Restaurant, audit-ready sign-in | Stage 0 config; owner staff list | Not started |
-| 6 | Inventory catalogue setup | Separate accommodation, camping, restaurant and experience collections with owner-approved fields | Owner-supplied categories, counts, prices, policies | Not started |
-| 7 | Reservation builder and booking reference | One reservation combining compatible services, server-side reference generation, per-inventory checks | Stages 5–6; compatibility rules | Not started |
-| 8 | UPI instructions and manual verification | Owner-approved payment display, evidence path, staff verification action, confirmation only after verification | Owner-supplied UPI process; Stage 7 | Not started |
-| 9 | Staff dashboards | Reception/booking and restaurant views, day-visitor handling, status filters and basic reporting | Stages 5–8 | Not started |
-| 10 | Content and media management | Owner-editable copy, approved gallery, testimonials only if supplied, Storage rules | Stages 2–5 | Not started |
-| 11 | Hardening, testing and launch | Rules review, emulator tests, accessibility, performance, SEO, preview channels, production deploy | All functional stages | Not started |
-| 12 | Post-launch iteration | Measure real usage, decide on future WhatsApp automation or extra languages | Live feedback | Not started |
-
-## Stage gates
-
-- **Gate A — before public content:** owner approves visual tokens and supplies
-  verified copy, imagery and contact details.
-- **Gate B — before booking logic:** roles, inventory fields, pricing and
-  combination rules are confirmed; security rules are written and tested.
-- **Gate C — before taking payments:** UPI details and the manual verification
-  procedure are documented and reviewed; no booking can be confirmed by a
-  client action.
-- **Gate D — before launch:** deny-by-default assumptions are replaced only
-  with tested, least-privilege rules.
-
-## Explicitly out of scope for the first release
-
-- WhatsApp bots, automated replies or webhooks
-- Online payment gateways or automatic UPI confirmation
-- Public self-registration for staff
-- Any invented room, price, policy, testimonial, photo or coordinate data
-
-Stop after Stage 0 and wait for approval.
+At each stage, review the result and confirm before moving to the next stage. Do not fabricate business facts, photos, reviews, prices, policies, or payment credentials.

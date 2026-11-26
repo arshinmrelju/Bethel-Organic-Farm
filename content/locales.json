@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "defaultLocale": "en",
+  "supportedLocales": ["en", "ml", "ta", "hi"],
+  "fallbackLocale": "en",
+  "legalSafetyPaymentTranslationPolicy": "Owner-reviewed translations only. Unreviewed translation values remain null and are served from English.",
+  "contentTypes": {
+    "accommodation": { "fields": ["name", "summary", "description", "amenities", "policies"] },
+    "experiences": { "fields": ["name", "summary", "description", "safetyNotes", "schedule"] },
+    "menuItems": { "fields": ["name", "description", "allergenNotes"] },
+    "packages": { "fields": ["name", "summary", "inclusions", "terms"] },
+    "policies": { "fields": ["name", "content"] },
+    "faqs": { "fields": ["question", "answer"] }
+  },
+  "translationStatus": {
+    "en": "owner_source_content_pending",
+    "ml": "awaiting_owner_review",
+    "ta": "awaiting_owner_review",
+    "hi": "awaiting_owner_review"
+  },
+  "records": []
+}

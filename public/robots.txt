@@ -1,7 +1,6 @@
-# Replace https://example.com with the confirmed production HTTPS domain.
 User-agent: *
 Allow: /
-Disallow: /admin/
+Disallow: /admin-preview.html
 Disallow: /design-system.html
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://YOUR-DOMAIN.example/sitemap.xml

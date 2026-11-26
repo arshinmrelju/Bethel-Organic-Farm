@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Preview of the Bethel Organic Farm owner and staff operations workspace.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="theme-color" content="#18372e">
+    <title>Farm operations · Bethel Organic Farm</title>
+    <link rel="stylesheet" href="/css/admin.css">
+  </head>
+  <body>
+    <a class="admin-skip-link" href="#main">Skip to content</a>
+    <div class="admin-shell">
+      <aside class="admin-sidebar" aria-label="Operations preview navigation">
+        <a class="admin-brand" href="/index.html">BETHEL <small>Farm operations · preview</small></a>
+        <nav class="admin-nav" aria-label="Operations sections">
+          <a href="#overview" aria-current="page">Overview</a><a href="#bookings">Bookings</a>
+          <a href="#services">Services & availability</a><a href="#restaurant">Restaurant</a>
+          <a href="#payments">Payments & refunds</a><a href="#team">Team & access</a>
+          <a href="#settings">Settings</a><a href="#reports">Reports</a>
+        </nav>
+        <div class="admin-sidebar__bottom"><span class="online-dot"></span>Preview · account not connected</div>
+      </aside>
+      <div class="admin-content">
+        <header class="admin-topbar"><div><strong>Bethel Organic Farm</strong><span>Dhoni · Palakkad</span></div><span class="admin-role-chip">Staff workspace preview</span></header>
+        <main class="admin-main" id="main">
+          <section id="overview" class="admin-welcome"><div><p class="admin-overline">Operations · Thursday, farm timezone</p><h1>A calm start to the day.</h1><p class="admin-lead">A clear view of bookings, service readiness and the work that needs attention.</p></div><span class="admin-preview-label">Preview · no live farm data</span></section>
+          <div class="admin-note"><strong>This is a design preview.</strong> No staff account is signed in, no customer records are shown, and all operational actions are disabled until Firebase identity and the farm’s configuration are connected.</div>
+          <section class="admin-metrics" aria-label="Operations summary">
+            <article><span>Bookings today</span><strong>—</strong><small>Live data not connected</small></article>
+            <article><span>Needs payment review</span><strong>—</strong><small>Manual review queue</small></article>
+            <article><span>Arrivals to prepare</span><strong>—</strong><small>Today’s confirmed stays</small></article>
+            <article><span>Refund cases</span><strong>—</strong><small>Owner policy applies</small></article>
+          </section>
+          <section id="bookings" class="admin-panel admin-section">
+            <div class="admin-section__head"><div><p class="admin-overline">Reservations</p><h2>Booking desk</h2><p>Search and review customer requests, dates, booking state and service lines.</p></div><button class="admin-button" disabled>Search bookings</button></div>
+            <div class="empty-state empty-state--compact"><div class="empty-icon" aria-hidden="true">⌕</div><h3>Bookings will appear here</h3><p>This view is reserved for authorised owner and booking staff. There are no sample guest records in this preview.</p></div>
+            <div class="admin-empty-table" aria-label="Empty booking table"><span>Reference</span><span>Visit date</span><span>Services</span><span>Booking status</span><span>Payment</span><b>No live records</b></div>
+          </section>
+          <section id="services" class="admin-section"><div class="admin-section__head"><div><p class="admin-overline">Service setup</p><h2>Stay, visits & experiences</h2><p>Keep the public service description separate from private rates and inventory.</p></div><button class="admin-button" disabled>Manage services</button></div>
+            <div class="admin-service-grid"><article><span class="service-mark">01</span><div><small>Accommodation</small><h3>Stays & camping</h3><p>Bookable items, nightly rates and arrival capacity.</p></div><button disabled>Configure</button></article><article><span class="service-mark">02</span><div><small>Day visits</small><h3>Farm experiences</h3><p>Visit activities, time slots and group limits.</p></div><button disabled>Configure</button></article><article><span class="service-mark">03</span><div><small>Experience</small><h3>Guided activities</h3><p>Schedules and availability by farm-local date.</p></div><button disabled>Configure</button></article></div>
+            <div class="admin-note admin-note--soft">Rates use integer paise. Availability edits preserve already-held and confirmed capacity; a change cannot reduce capacity below reservations already on the books.</div>
+          </section>
+          <section id="restaurant" class="admin-panel admin-section"><div class="admin-section__head"><div><p class="admin-overline">Restaurant service</p><h2>Kitchen & dining</h2><p>Restaurant staff receive only restaurant reservation lines, not payment details or unrelated guest bookings.</p></div><button class="admin-button" disabled>Open service queue</button></div><div class="role-banner"><span>Restricted workspace</span><p>Restaurant role · item, date, time slot, quantity and service state only.</p><small>No payment review · no guest contact details · no other service types</small></div><div class="empty-state empty-state--compact"><h3>No dining reservations connected</h3><p>Live service work appears after authorised staff access is set up.</p></div></section>
+          <section id="payments" class="admin-section"><div class="admin-section__head"><div><p class="admin-overline">Manual verification</p><h2>Payments & refunds</h2><p>Check customer references against farm payment records; handle refunds by the saved policy.</p></div><a class="admin-button admin-button--link" href="/payment-review.html">View payment review preview</a></div><div class="admin-two-cards"><article class="admin-panel"><span class="admin-tag">Booking staff · owner</span><h3>Payment evidence</h3><p>Review a submitted UPI reference, verify it externally, or reject it with a reason. Every decision is recorded.</p><a href="/payment-review.html">Open review preview →</a></article><article class="admin-panel"><span class="admin-tag">Booking staff · owner</span><h3>Refund cases</h3><p>Calculated amount and service-line breakdown follow the policy version saved with the booking. Staff record each step; no funds move automatically.</p><button disabled>Refund queue · setup pending</button></article></div></section>
+          <section id="team" class="admin-panel admin-section"><div class="admin-section__head"><div><p class="admin-overline">Team access</p><h2>People see what their role needs.</h2><p>Roles are assigned by an owner and enforced on the server.</p></div><button class="admin-button" disabled>Invite or change role</button></div><div class="admin-role-grid"><article><b>Owner</b><p>Business settings, staff roles, bookings, money records and audit history.</p><small>Full operations access</small></article><article><b>Booking staff</b><p>Guest booking details, payment review, cancellation and refund workflow.</p><small>No staff role changes</small></article><article><b>Restaurant staff</b><p>Restaurant reservation lines for service fulfilment only.</p><small>No guest contact or payment records</small></article></div><p class="admin-note admin-note--soft">Role changes take effect through secure sign-in claims. The owner bootstrap must be performed by an operator after the farm confirms its project and first owner account.</p></section>
+          <section id="settings" class="admin-section"><div class="admin-section__head"><div><p class="admin-overline">Owner controls</p><h2>Business settings</h2><p>Every value below requires confirmation from the farm before checkout can go live.</p></div></div><div class="admin-settings-grid"><article><span>Reservation checkout</span><strong>Not enabled</strong><small>Pricing, fees and hold duration required</small></article><article><span>UPI payment instructions</span><strong>Not configured</strong><small>Verified payee and UPI ID required</small></article><article><span>Cancellation policy</span><strong>Not configured</strong><small>Versioned rule by service type required</small></article><article><span>Farm contact & public details</span><strong>Owner review pending</strong><small>Only confirmed details should be published</small></article></div></section>
+          <section id="reports" class="admin-panel admin-section"><div class="admin-section__head"><div><p class="admin-overline">Reports</p><h2>Understand the season.</h2><p>Operational totals should be clearly labelled by their reporting window.</p></div><button disabled>Export report</button></div><div class="admin-report-preview"><div><span>Report status</span><strong>Awaiting live data</strong><small>Reports are limited to the latest 100 bookings in the current backend overview.</small></div><div><span>Available measures</span><strong>Booking · payment · refund states</strong><small>Financial totals use integer paise and INR formatting.</small></div></div></section>
+          <footer class="admin-footer"><span>Bethel Organic Farm · operations workspace preview</span><a href="/index.html">Return to public website</a></footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

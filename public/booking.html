@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Plan a stay or day visit to Bethel Organic Farm in Nochupully, Mundur, Palakkad. Arrange visits in advance by phone, WhatsApp, or email.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="theme-color" content="#10271f">
+    <title>Plan your visit | Bethel Organic Farm</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/booking.css">
+    <script type="module" src="/js/booking.js"></script>
+  </head>
+  <body class="booking-page">
+    <a class="skip-link" href="#main">Skip to booking form</a>
+    <header class="site-header booking-header">
+      <a class="wordmark" href="/index.html">Bethel <small>Organic Farm</small></a>
+      <a class="booking-back" href="/index.html">← Back to the farm</a>
+    </header>
+
+    <main id="main" class="booking-main">
+      <div class="booking-heading">
+        <p class="eyebrow">Your time at the farm</p>
+        <h1 data-i18n="booking.heading">Plan a visit at your pace.</h1>
+        <p class="lead">Choose what you’re interested in and review a draft request. This preview does not check availability, take payment, or send a reservation to the farm.</p>
+      </div>
+
+      <div class="preview-banner" role="status">
+        <span class="preview-banner__icon" aria-hidden="true">i</span>
+        <p><strong>Booking preview only.</strong> All visits are by advance booking. Contact the farm by phone, WhatsApp, or email to confirm availability, timing, and prices. This preview does not submit or store your selections.</p>
+      </div>
+      <div class="booking-contact-options" aria-label="Contact the farm to arrange a visit">
+        <span>Arrange your visit directly:</span>
+        <a href="tel:+919037022369">Call +91 90370 22369</a>
+        <a href="https://wa.me/919037022369" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="mailto:bethelorganicfarm1@gmail.com">Email</a>
+      </div>
+
+      <div class="booking-layout">
+        <section class="booking-flow" aria-label="Visit planning steps">
+          <ol class="booking-stepper" aria-label="Booking steps">
+            <li aria-current="step"><span>01</span><span class="step-name" data-i18n="booking.step.visit">Visit</span></li>
+            <li><span>02</span><span class="step-name" data-i18n="booking.step.experiences">Experiences</span></li>
+            <li><span>03</span><span class="step-name" data-i18n="booking.step.details">Your details</span></li>
+            <li><span>04</span><span class="step-name" data-i18n="booking.step.review">Review</span></li>
+          </ol>
+          <div class="progress-track" role="progressbar" aria-label="Booking form progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span></span></div>
+
+          <form id="booking-form" novalidate>
+            <section class="booking-step" data-step="0" aria-labelledby="step-visit-title">
+              <p class="booking-step__eyebrow">Step 01 · Visit</p>
+              <h2 id="step-visit-title">What brings you here?</h2>
+              <p class="muted">Choose the kind of visit you’d like to plan. This is a preference only; no space is held.</p>
+              <fieldset class="visit-type-grid">
+                <legend class="visually-hidden">Choose a visit type</legend>
+                <label class="visit-choice"><input type="radio" name="visitType" value="Stay" required><span class="visit-choice__icon" aria-hidden="true">⌂</span><span><strong data-i18n="visit.stay">Stay</strong><small>2 rooms · up to 4 guests each · all meals included</small></span></label>
+                <label class="visit-choice"><input type="radio" name="visitType" value="Day visit"><span class="visit-choice__icon" aria-hidden="true">☼</span><span><strong data-i18n="visit.day">Day visit</strong><small>Entry and farm tour included; add experiences by arrangement</small></span></label>
+                <label class="visit-choice"><input type="radio" name="visitType" value="Camping"><span class="visit-choice__icon" aria-hidden="true">△</span><span><strong data-i18n="visit.camping">Camping</strong><small>Available by advance enquiry</small></span></label>
+                <label class="visit-choice"><input type="radio" name="visitType" value="Experiences"><span class="visit-choice__icon" aria-hidden="true">✳</span><span><strong data-i18n="visit.activities">Experiences</strong><small>Select activities in the next step</small></span></label>
+              </fieldset>
+              <p class="booking-error" data-error="visitType" aria-live="polite"></p>
+
+              <div class="field-grid">
+                <div class="field"><label for="visit-date">Preferred date</label><input id="visit-date" name="date" type="date" required><p class="field__hint">Availability is not connected yet.</p></div>
+                <div class="field"><label for="visit-time">Preferred arrival time</label><select id="visit-time" name="time" disabled><option>Coordinate with the farm</option></select><p class="field__hint">Timing is flexible and depends on your activity or stay; confirm directly with the farm.</p></div>
+              </div>
+              <div class="field-grid guest-counts">
+                <div class="field"><label for="adults">Adults</label><input id="adults" name="adults" type="number" min="1" value="1" required><p class="field__hint">At least one adult</p></div>
+                <div class="field"><label for="children">Children</label><input id="children" name="children" type="number" min="0" value="0"><p class="field__hint">Enter 0 if none</p></div>
+              </div>
+              <p class="form-note">Guest limits will be shown when capacity details are confirmed.</p>
+              <div class="step-actions"><span></span><button class="button button--primary" type="button" data-next><span data-i18n="booking.continue">Continue</span> <span aria-hidden="true">→</span></button></div>
+            </section>
+
+            <section class="booking-step" data-step="1" aria-labelledby="step-experiences-title" hidden>
+              <p class="booking-step__eyebrow">Step 02 · Add to your visit</p>
+              <h2 id="step-experiences-title">Make the day your own.</h2>
+              <p class="muted">Select experiences you’d like to ask about. Schedules, prices, and spaces are not confirmed here.</p>
+              <fieldset class="experience-options">
+                <legend>Experiences to ask about <span>(optional)</span></legend>
+                <label><input type="checkbox" name="experiences" value="Trekking & nature walks"><span>Trekking & nature walks</span></label>
+                <label><input type="checkbox" name="experiences" value="Farm tours"><span>Farm tours</span></label>
+                <label><input type="checkbox" name="experiences" value="Riverside picnic"><span>Riverside picnic</span></label>
+                <label><input type="checkbox" name="experiences" value="Outdoor BBQ"><span>Outdoor BBQ</span></label>
+                <label><input type="checkbox" name="experiences" value="Kids activities"><span>Kids’ activities: farm care, planting, nature games, and outdoor games</span></label>
+                <label><input type="checkbox" name="experiences" value="Restaurant or cafe meal"><span>Restaurant/café meal: Kerala vegetarian or non-vegetarian food</span></label>
+                <label><input type="checkbox" name="experiences" value="Camping"><span>Camping</span></label>
+              </fieldset>
+              <div class="preorder-option">
+                <label><input type="checkbox" name="food" value="Restaurant or grill enquiry"><span><strong>Ask about restaurant or grill food</strong><small>Kerala meals are available; ask the farm about menu, grill arrangements, and prices.</small></span></label>
+              </div>
+              <div class="field" style="margin-top: var(--space-6);"><label for="visit-notes">Anything you’d like the farm to know?</label><textarea id="visit-notes" name="notes" rows="3" maxlength="500" placeholder="Optional note for this local preview"></textarea><p class="field__hint">This note stays in the current browser tab and is not sent.</p></div>
+              <div class="step-actions"><button class="button button--outline" type="button" data-prev>← <span data-i18n="booking.back">Back</span></button><button class="button button--primary" type="button" data-next><span data-i18n="booking.continue">Continue</span> <span aria-hidden="true">→</span></button></div>
+            </section>
+
+            <section class="booking-step" data-step="2" aria-labelledby="step-details-title" hidden>
+              <p class="booking-step__eyebrow">Step 03 · Your details</p>
+              <h2 id="step-details-title">How can the farm reach you?</h2>
+              <p class="muted">Guest checkout is planned. No account is required. These fields are for the local preview and will not be sent or saved.</p>
+              <div class="field"><label for="guest-name">Your name</label><input id="guest-name" name="guestName" autocomplete="name" maxlength="100" placeholder="Name for the enquiry"><p class="field__hint">Required for a future enquiry.</p></div>
+              <div class="field-grid" style="margin-top: var(--space-5);">
+                <div class="field"><label for="guest-email">Email address</label><input id="guest-email" name="guestEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+                <div class="field"><label for="guest-phone">Phone number</label><input id="guest-phone" name="guestPhone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Your number with country code"></div>
+              </div>
+              <p class="field__hint">Add an email address or phone number so the farm can reply. Contact details are not connected in this preview.</p>
+              <p class="booking-error" data-error="guestDetails" aria-live="polite"></p>
+              <div class="guest-privacy"><span aria-hidden="true">◇</span><p>Your information remains in this browser tab and is cleared when you leave or refresh. No account or booking record is created.</p></div>
+              <div class="step-actions"><button class="button button--outline" type="button" data-prev>← <span data-i18n="booking.back">Back</span></button><button class="button button--primary" type="button" data-next><span data-i18n="booking.review">Review visit</span> <span aria-hidden="true">→</span></button></div>
+            </section>
+
+            <section class="booking-step" data-step="3" aria-labelledby="step-review-title" hidden>
+              <p class="booking-step__eyebrow">Step 04 · Review</p>
+              <h2 id="step-review-title">Your visit, at a glance.</h2>
+              <p class="muted">Review your preferences. No reservation or payment request will be submitted from this page.</p>
+              <div class="review-card" aria-live="polite">
+                <div class="review-card__row"><span>Visit type</span><strong data-summary="type">Not selected</strong></div>
+                <div class="review-card__row"><span>Preferred date</span><strong data-summary="date">Not selected</strong></div>
+                <div class="review-card__row"><span>Guests</span><strong data-summary="guests">Not selected</strong></div>
+                <div class="review-card__row review-card__row--block"><span>Experiences</span><strong data-summary="experiences">No experiences selected</strong></div>
+                <div class="review-card__row"><span>Food preorder</span><strong data-summary="food">Not requested</strong></div>
+                <div class="review-card__row review-card__row--total"><span>Price estimate</span><strong>Awaiting farm rates</strong></div>
+              </div>
+              <div class="review-contact"><span class="review-contact__initial" aria-hidden="true">B</span><div><span>Enquiry for</span><strong data-summary="name">Guest details</strong><small data-summary="contact">Contact details not connected</small></div><button type="button" class="text-button" data-edit-details>Edit</button></div>
+
+              <div class="payment-preview">
+                <div class="payment-preview__header"><span class="badge badge--quiet">Cashfree setup pending</span><span class="payment-preview__method">Hosted payment link · after confirmation</span></div>
+                <h3>Your payment link follows farm confirmation.</h3>
+                <p>Once the farm confirms your date and price, it will share a Cashfree payment link for the agreed advance. No payment is due through this preview. <a href="/payment.html">See the payment and status guide</a>.</p>
+                <p class="payment-warning"><strong>Payment collection is not active yet.</strong> Cashfree merchant approval, farm rates, advance amount, refund terms, and the live booking connection are still pending.</p>
+              </div>
+              <div class="preview-finish" role="status" aria-live="polite" hidden>
+                <strong>Preview complete.</strong> Your preferences were not sent, saved, or reserved. Contact the farm directly to arrange your visit.
+              </div>
+              <div class="step-actions"><button class="button button--outline" type="button" data-prev>← <span data-i18n="booking.back">Back</span></button><button class="button button--primary" type="button" data-finish data-i18n="booking.finish">Finish preview</button></div>
+            </section>
+          </form>
+          <p class="booking-help">This preview does not submit an enquiry. Contact the farm by phone, <a href="https://wa.me/919037022369" target="_blank" rel="noopener noreferrer">WhatsApp</a>, or <a href="mailto:bethelorganicfarm1@gmail.com">email</a> to confirm arrangements.</p>
+        </section>
+
+        <aside class="booking-aside" aria-label="Reservation and status information">
+          <div class="summary-panel">
+            <p class="eyebrow">Visit summary</p>
+            <h2>Your plan</h2>
+            <div class="summary-panel__line"><span>Visit type</span><strong data-aside="type">Choose a visit</strong></div>
+            <div class="summary-panel__line"><span>Date</span><strong data-aside="date">Select a date</strong></div>
+            <div class="summary-panel__line"><span>Guests</span><strong data-aside="guests">1 adult</strong></div>
+            <div class="summary-panel__line"><span>Experiences</span><strong data-aside="experiences">None selected</strong></div>
+            <div class="summary-panel__total"><span>Estimate</span><strong>To be confirmed</strong></div>
+            <p class="summary-panel__note">Prices and availability are not configured. This preview cannot reserve inventory.</p>
+          </div>
+          <div class="status-panel">
+            <p class="eyebrow">What happens next</p>
+            <h2>Booking status guide</h2>
+            <ol class="status-guide">
+              <li><span class="status-guide__dot"></span><span><strong>Draft</strong><small>Your selections are not submitted in this preview.</small></span></li>
+              <li><span class="status-guide__dot"></span><span><strong>Awaiting payment</strong><small>Shown only after a real request and instructions are configured.</small></span></li>
+              <li><span class="status-guide__dot"></span><span><strong>Payment submitted</strong><small>Cashfree has received a payment attempt; the farm has not confirmed the booking yet.</small></span></li>
+              <li><span class="status-guide__dot"></span><span><strong>Payment verification</strong><small>The live system will verify payment status with Cashfree before confirmation.</small></span></li>
+              <li><span class="status-guide__dot"></span><span><strong>Confirmed</strong><small>Only after an authorised payment verification.</small></span></li>
+              <li class="status-guide__later"><span class="status-guide__dot"></span><span><strong>Rejected · cancelled</strong><small>Separate booking and payment outcomes in the full platform.</small></span></li>
+              <li class="status-guide__later"><span class="status-guide__dot"></span><span><strong>Refund pending · refund completed</strong><small>Refund status is tracked separately from booking status.</small></span></li>
+            </ol>
+          </div>
+        </aside>
+      </div>
+
+      <section class="lookup-panel" aria-labelledby="lookup-title">
+        <div><p class="eyebrow">Already have a reservation?</p><h2 id="lookup-title">Manage a booking</h2><p class="muted">Secure booking lookup will be added with the backend. A reference number alone will never expose a reservation.</p></div>
+        <button class="button button--outline" type="button" disabled>Booking lookup not available yet</button>
+      </section>
+    </main>
+
+    <footer class="farm-footer booking-footer">
+      <div class="container farm-footer__top"><a class="wordmark" href="/index.html">Bethel <small>Organic Farm</small></a><p>Nochupully · Mundur · Palakkad, Kerala</p><nav aria-label="Footer navigation"><a href="/index.html#farm">The farm</a><a href="/index.html#experiences">Experiences</a><a href="/index.html#contact">Contact details</a></nav></div>
+      <div class="container farm-footer__bottom"><span>Booking preview · no request submitted</span><a href="/index.html">Return to the farm</a></div>
+    </footer>
+  </body>
+</html>

@@ -1,49 +1,22 @@
-# ---------------------------------------------------------------------------
-# Local secrets and credentials (never commit these)
-# ---------------------------------------------------------------------------
+# Local configuration and secrets
 .env
 .env.*
 !.env.example
-.secrets/
-*.pem
-*.key
-*.p12
-*service-account*.json
-serviceAccountKey.json
-*-adminsdk*.json
-payment-credentials*
-upi-credentials*
+service-account*.json
+firebase-adminsdk*.json
+*-private-key*.json
 
-# Local overrides for the browser config placeholder
-public/js/config/firebase-config.local.js
-
-# ---------------------------------------------------------------------------
-# Firebase CLI / emulator output
-# ---------------------------------------------------------------------------
+# Firebase local tooling output
 .firebase/
 firebase-debug.log
 firebase-debug.*.log
-*-firebase-debug.log
+firestore-debug.log
 ui-debug.log
-emulator-data/
+emulator-export/
 
-# ---------------------------------------------------------------------------
-# Dependencies and build output
-# ---------------------------------------------------------------------------
+# Dependencies and generated files (if introduced in a later stage)
 node_modules/
-functions/node_modules/
 dist/
-build/
 coverage/
-functions/lib/
-
-# ---------------------------------------------------------------------------
-# Editor, OS and generated files
-# ---------------------------------------------------------------------------
-.vscode/
-.idea/
-*.swp
 .DS_Store
 Thumbs.db
-*.tmp
-*.log

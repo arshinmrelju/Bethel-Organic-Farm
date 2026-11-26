@@ -1,189 +1,93 @@
-# Bethel Organic Farm
+# Bethel Organic Farm website and booking platform
 
-> Welcome, Thomas — this repository now contains the foundation scaffold for
-> the website and booking platform.
+Project for Bethel Organic Farm in Nochupully, Mundur, Palakkad, Kerala. The public site, design system, local booking journey, Firebase rules, data model, and first trusted backend operations are in place. No Firebase project is connected and nothing has been deployed.
 
-## Project status
+## Current stage
 
-**Foundation stage only.** The structure, styling tokens, Firebase placeholders
-and deny-by-default security rules are in place. The public content, full
-booking flow, payments and admin dashboards are intentionally **not built yet**.
-See [ROADMAP.md](./ROADMAP.md) for the remaining stages.
+Stage 09: Quality and launch readiness. The implementation is not launch-ready: it has no connected Firebase project, real farm configuration, or production test pass.
 
-## Confirmed direction
-
-- **Frontend:** HTML5, CSS3 and vanilla JavaScript ES modules. No React,
-  Next.js, Vue, Angular or other frontend framework.
-- **Backend:** Firebase — Cloud Firestore, Authentication, Cloud Functions,
-  Storage and Hosting.
-- **Visual mood:** “Cinematic Wilderness” — deep forest greens, warm ivory,
-  earthy neutrals, editorial typography and restrained motion.
-- **Location:** Dhoni, Palakkad, Kerala, India.
-- **Planned languages:** English, Malayalam, Tamil and Hindi.
-- **Audiences:** staying guests and day visitors.
-- **Staff roles:** Owner, Reception/Booking Staff and Restaurant Staff.
-- **Booking:** online booking plus WhatsApp enquiry/assisted booking. WhatsApp
-  automation is **not** in the first release.
-- **Payments:** direct UPI with hybrid/manual verification. A booking is never
-  marked confirmed until payment has been verified by authorised staff.
-- **Inventory:** accommodation, camping, restaurant and experiences are tracked
-  separately, but compatible services may share one reservation and booking
-  reference.
-
-## Repository layout
+## Project structure
 
 ```text
-.
-├── .firebaserc                 # Firebase project alias (placeholder)
-├── .gitignore                  # Secrets, dependencies and generated output
-├── ARCHITECTURE.md             # Systems, boundaries and workflows
-├── DESIGN_SYSTEM.md            # Tokens, components and responsive decisions
-├── ROADMAP.md                  # Remaining implementation stages
-├── README.md                   # This file
-├── firebase.json               # Hosting, Firestore rules and Storage rules
-├── firestore.indexes.json      # Firestore indexes (empty for now)
-├── firestore.rules             # Deny-by-default starter rules
-├── storage.rules               # Deny-by-default starter rules
-├── functions/
-│   └── README.md               # Reserved for Cloud Functions
-└── public/
-    ├── 404.html
-    ├── design-system.html      # Internal token/component preview
-    ├── index.html              # Public home page
-    ├── admin/
-    │   └── index.html          # Staff sign-in shell
-    ├── assets/
-    │   └── README.md           # No media committed yet
-    ├── css/
-    │   ├── tokens.css          # Central design tokens and reset
-    │   ├── components.css      # Reusable public and admin patterns
-    │   ├── site.css            # Public page composition
-    │   ├── admin.css           # Staff area composition
-    │   └── demo.css            # Design-system preview layout
-    └── js/
-        ├── config/
-        │   └── firebase-config.js
-        ├── firebase/
-        │   └── initialize.js   # Single shared Firebase app instance
-        ├── pages/
-        │   └── home.js         # Public home page entry point
-        ├── admin/
-        │   └── dashboard.js    # Staff sign-in entry point
-        ├── demo.js             # Loading-state demonstration
-        └── ui/
-            └── status.js       # Shared status message helper
+public/                         Static public site and local-only booking preview
+  css/                          Public design system and admin/booking styles
+  js/                           Public-site and local booking-preview modules
+content/locales.json            Owner-managed translated content field schema
+docs/NOTIFICATIONS.md           Translation coverage and notification setup notes
+functions/
+  domain.js                     Pure validators, money helpers, and state machines
+  admin.js                      Service and availability configuration validation
+  index.js                      Trusted callable and scheduled functions
+  scripts/bootstrap-owner.mjs   Private, manual initial-owner setup using ADC
+  test/                          Pure domain, payment, and operations tests
+firestore.rules                 Explicit client access; default deny
+storage.rules                   Default deny, including payment evidence
+firestore.indexes.json          Queries for holds and booking operations
+firebase.json                   Hosting and local emulator configuration
+tests/security.rules.test.mjs   Firestore and Storage emulator rule tests
 ```
 
-## Run locally
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the model, state transitions, security boundaries, and workflows; [ROADMAP.md](ROADMAP.md) for the staged build plan.
 
-### Prerequisites
+See [docs/LAUNCH-CHECKLIST.md](docs/LAUNCH-CHECKLIST.md) for the owner information checklist, release gates, controlled deployment outline, and rollback/incident notes. It is a preparation guide; no Firebase deployment or paid service was activated.
 
-- A modern browser with ES module and import-map support (current Chrome,
-  Edge, Firefox or Safari).
-- A local static server. Use one of:
-  - Python 3: `python -m http.server 8080 --directory public`
-  - Node.js: `npx serve public`
-  - VS Code: “Live Server” extension, serving the `public` folder.
+See [docs/QA-REPORT.md](docs/QA-REPORT.md) for the Stage 09 checks completed and the verification gaps that remain.
 
-> Opening `index.html` with a `file://` URL will not work reliably because
-> browsers block ES module imports from the file system. Use a local server.
+## Preview the website
 
-### Steps
-
-1. From the repository root, start a static server, for example:
-
-   ```powershell
-   python -m http.server 8080 --directory public
-   ```
-
-2. Open <http://localhost:8080/> for the public shell.
-3. Open <http://localhost:8080/admin/> for the staff shell.
-4. Open <http://localhost:8080/design-system.html> for the internal design
-   preview. It is intentionally marked `noindex` and is not a customer page.
-5. Confirm the pages load and show the “starter mode” notice. This means the
-   module structure and styling work without any Firebase project attached.
-
-No npm install or build step is required for the frontend at this stage.
-
-## Supply the Firebase configuration
-
-The file [`public/js/config/firebase-config.js`](./public/js/config/firebase-config.js)
-contains clearly named placeholders. Replace every `REPLACE_*` value with the
-values from the Firebase console:
-
-| Key | Where to find it |
-| --- | --- |
-| `apiKey` | Firebase console → Project settings → Your apps → Web app |
-| `authDomain` | Usually `<projectId>.firebaseapp.com` |
-| `projectId` | Firebase console → Project settings → Project ID |
-| `storageBucket` | The bucket shown in the Web app config |
-| `messagingSenderId` | Web app config |
-| `appId` | Web app config |
-
-Also replace `REPLACE_WITH_FIREBASE_PROJECT_ID` in [`.firebaserc`](./.firebaserc),
-or run `firebase use --add` and select the real project.
-
-These web config values are browser-visible identifiers, not secrets. **Never**
-commit a service-account JSON file, private key, UPI credential or payment
-secret. Common filenames are already excluded in [`.gitignore`](./.gitignore).
-
-### Firebase console setup still required
-
-1. Create a Firebase project and register a Web app.
-2. Enable **Authentication → Sign-in method → Email/Password**.
-3. Create staff accounts manually in the console. Do not expose a public
-   sign-up form.
-4. Assign roles with custom claims: `owner`, `reception` or `restaurant`.
-   A trusted admin path must set these claims; the browser must never do it.
-   The claim setter is a later roadmap stage.
-5. Create Cloud Firestore and Cloud Storage instances.
-6. Deploy the deny-by-default rules before adding any data.
-7. Supply the owner-approved contact details before showing any WhatsApp,
-   phone or email link. They are intentionally empty in the config.
-
-## Deploy
-
-Firebase CLI is needed only for deployment (and later for Cloud Functions):
+Use any local static-file server that supports ES modules. From this folder, for example:
 
 ```powershell
-npm install -g firebase-tools
-firebase login
-firebase use --add
-firebase deploy --only hosting,firestore:rules,storage
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1123-915-0_26.1123.915.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' -m http.server 8000 --directory public
 ```
 
-Cloud Functions are reserved in `functions/README.md` but are **not** wired
-into `firebase.json` yet. They will be added when the first trusted function is
-implemented.
+Open `http://localhost:8000` for the public site or `http://localhost:8000/booking.html` for the booking preview. The preview keeps entered guest details in page memory only; it does not submit or save them.
 
-## Security notes
+## Install development dependencies and run local checks
 
-- `firestore.rules` and `storage.rules` deny all access. Do not loosen them to
-  make a UI work; add precise, role-aware rules in a later stage.
-- The staff area’s client-side sign-in check is only a convenience. Real
-  authorization is enforced by Firebase rules and Cloud Functions.
-- No booking, inventory or payment logic exists yet, so there is no risk of a
-  browser marking a reservation confirmed.
+Use Node.js 22 or later. From this folder, install the test/emulator tools and the Functions dependencies:
 
-## Next steps
+```powershell
+npm install
+npm --prefix functions install
+```
 
-Read [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) for the visual tokens and reusable
-patterns, [ARCHITECTURE.md](./ARCHITECTURE.md) for the planned system
-boundaries, and [ROADMAP.md](./ROADMAP.md) for the order of remaining work. Do
-not begin the next stage until the owner approves this foundation and the
-design system, and supplies the missing inputs listed below.
+Run the dependency-free state, validation, and money tests:
 
-## Decisions needed from the owner
+```powershell
+npm run test:domain
+```
 
-- Approval of the palette, typography and component density in the design system.
-- Verified phone/email and the exact WhatsApp number or link.
-- UPI details and the manual verification process, kept out of the repository
-  until a secure approach is agreed.
-- Actual inventory categories, counts, pricing and booking policies.
-- Named staff and their roles.
-- Approved photography, copy and any testimonials.
-- Malayalam, Tamil and Hindi translations or approval to draft them.
-- Rules for combining services into one reservation and for day-visitor slots.
+Run the Firestore and Storage security-rule tests using only the local emulators and a demo project ID:
 
-The original repository contained only the note “Welcome Thomas / Hehe”; the
-greeting has been retained above while replacing the placeholder content.
+```powershell
+npm run test:rules
+```
+
+Run both suites with `npm test`. The Firebase Emulator Suite may download its emulator binaries the first time. These commands do not connect to a farm Firebase project.
+
+## Firebase setup and owner bootstrap
+
+No project ID, Firebase web config, UPI details, service account, owner UID, or billing choice is supplied. The farm has supplied its phone/WhatsApp number, email, and postal address for the public contact section; a map pin is still needed. `.firebaserc` is intentionally absent. Choose a Firebase project and confirm its billing/setup before linking one with Firebase CLI. Keep service-account files, private keys, `.env` files, payment details, and evidence out of source control.
+
+The Functions deployment runtime is Node.js 22. Deploying Cloud Functions currently requires the Firebase Blaze plan, and the scheduled hold cleanup uses Cloud Scheduler. Local emulators can be used without connecting or deploying to a production project. Do not enable billing or deploy as part of this stage.
+
+After a project and initial owner account are confirmed, set `FIREBASE_PROJECT_ID` and `BETHEL_OWNER_UID`, authenticate locally with Application Default Credentials, review `functions/scripts/bootstrap-owner.mjs`, then run it once from `functions/`. It sets the owner custom claim and records the bootstrap; there is no public “make me owner” function. Staff roles can then be assigned by an owner callable.
+
+## Required owner configuration before reservations can be created
+
+Set `businessSettings/booking` with explicit `checkoutEnabled`, `pricingConfigured`, `feePolicyConfigured`, `currency`, and `holdDurationMinutes`. For every bookable service item, configure `isBookable`, `currency`, `unitPricePaise`, `taxRateBps`, and `feePaisePerUnit`. Create inventory documents for each date and configured time slot with `date`, `slotId`, `capacity`, `held`, and `reserved` counters. The backend intentionally rejects missing values rather than inventing rates, availability, taxes, fees, or hold periods.
+
+The farm must also provide service categories, capacities, schedules, guest terms, cancellation/refund rules, official contact details, UPI instructions, and an approved Firebase project. Direct UPI evidence is only evidence; an authorised staff member must verify it before a booking is confirmed.
+
+Stage 06 adds owner-only audited functions to configure UPI instructions and a versioned refund policy. The UPI setting remains disabled until the owner supplies and verifies the VPA/payee. Refund percentages are explicit per service type and saved as a snapshot on each reservation; cancellation calculations use service start times and integer paise. Positive refund amounts enter the manual staff workflow and are never sent automatically. Review the customer guide at `public/payment.html` and staff preview at `public/payment-review.html`.
+
+Stage 07 expands `public/admin-preview.html` into a role-aware operations workspace preview. Trusted callable functions provide an overview scoped to owner/booking or restaurant roles, audited owner-only service pricing and availability setup, and capacity checks that preserve held/reserved inventory. Service and availability inputs are validated using INR integer paise and the farm timezone. The screen does not sign in, show seeded customer data, or enable actions until the frontend is connected to Firebase Auth and the approved project.
+
+Stage 08 adds a stable translation dictionary and keyboard-accessible language selector on the public home and booking pages. English, Malayalam, Tamil, and Hindi core navigation, key headings, visit choices, and booking summary labels are translated. Guest locale choice stays in local browser storage. English remains the fallback; most descriptive content and all safety/payment/cancellation/legal copy remain English until owner-reviewed translations are supplied. The locale content schema includes accommodation, experiences, menu items, packages, policies, and FAQs.
+
+Notification preference callables store a signed-in customer's chosen locale and event preferences. Event opt-ins default off and no channel can be enabled until an owner selects channels and an appropriate consent flow is approved. A provider-neutral outbox record builder provides deduplication and safe status/error fields, but no worker, paid provider, or sending path is enabled. WhatsApp automation remains out of scope.
+
+## Current limitations
+
+No frontend is connected to Firebase yet. The customer and staff screens are previews and do not create real reservations or expose live records. Rate limits and production App Check registration need review before launch. Payment evidence uploads are blocked in Storage until scoped private access is implemented. Refunds require owner-supplied rules and manual staff processing; no refund is sent automatically. No production deployment has been attempted. The public site now shows farm-supplied contact/address details and information; rates, operating schedules, policies, and a map pin remain to be supplied. The pure Node domain and payment tests run locally; Firestore/Storage emulator rules tests could not be run because the package registry was unavailable during dependency installation.

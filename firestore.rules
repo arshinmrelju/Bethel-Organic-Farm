@@ -1,10 +1,114 @@
 rules_version = '2';
-
-// Foundation rules: deny everything until real role-based rules are designed.
-// Do not open these rules to make the admin UI work. Client-side checks are
-// only a user-experience safeguard; server rules are the actual security layer.
 service cloud.firestore {
   match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function staffRole() {
+      return signedIn() ? request.auth.token.staffRole : '';
+    }
+
+    function isOwner() {
+      return staffRole() == 'owner';
+    }
+
+    function isBookingStaff() {
+      return staffRole() == 'owner' || staffRole() == 'booking';
+    }
+
+    function isRestaurantStaff() {
+      return staffRole() == 'owner' || staffRole() == 'restaurant';
+    }
+
+    function canManageBookings() {
+      return signedIn() && isBookingStaff();
+    }
+
+    function ownsBooking(bookingId) {
+      return signedIn() &&
+        get(/databases/$(database)/documents/bookings/$(bookingId)).data.customerUid == request.auth.uid;
+    }
+
+    // Public display content is stored separately from private price and inventory settings.
+    match /publicServices/{serviceType}/items/{itemId} {
+      allow get, list: if resource.data.isPublished == true;
+      allow create, update, delete: if false;
+    }
+
+    match /serviceCatalog/{serviceType}/items/{itemId} {
+      allow read, write: if false;
+    }
+
+    match /businessSettings/{settingId} {
+      allow get: if settingId == 'public' && resource.data.isPublished == true;
+      allow list, create, update, delete: if false;
+    }
+
+    match /reviews/{reviewId} {
+      allow get, list: if resource.data.status == 'approved';
+      allow create, update, delete: if false;
+    }
+
+    match /users/{userId} {
+      allow get: if signedIn() && request.auth.uid == userId;
+      allow list, create, update, delete: if false;
+    }
+
+    match /staffRoles/{userId} {
+      allow read, write: if false;
+    }
+
+    match /notificationPreferences/{userId} {
+      allow read, write: if false;
+    }
+
+    match /notificationOutbox/{eventId} {
+      allow read, write: if false;
+    }
+
+    match /bookings/{bookingId} {
+      allow get, list: if canManageBookings() || ownsBooking(bookingId);
+      allow create, update, delete: if false;
+
+      match /serviceReservations/{reservationId} {
+        allow get, list: if canManageBookings() || ownsBooking(bookingId);
+        allow create, update, delete: if false;
+      }
+
+      match /paymentEvents/{eventId} {
+        allow read, write: if false;
+      }
+    }
+
+    match /payments/{paymentId} {
+      allow get, list: if canManageBookings();
+      allow create, update, delete: if false;
+    }
+
+    match /refunds/{refundId} {
+      allow get, list: if isOwner() || staffRole() == 'booking';
+      allow create, update, delete: if false;
+    }
+
+    match /holds/{holdId} {
+      allow read, write: if false;
+    }
+
+    match /inventory/{inventoryId} {
+      allow read, write: if false;
+    }
+
+    match /idempotencyKeys/{keyId} {
+      allow read, write: if false;
+    }
+
+    match /auditLogs/{logId} {
+      allow get, list: if isOwner();
+      allow create, update, delete: if false;
+    }
+
+    // Anything not explicitly opened above remains private.
     match /{document=**} {
       allow read, write: if false;
     }

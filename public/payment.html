@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="theme-color" content="#183e2e">
+    <title>Payment & booking status · Bethel Organic Farm</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/payment.css">
+  </head>
+  <body class="payment-page">
+    <header class="payment-top"><a class="wordmark" href="/index.html">Bethel <small>Organic Farm</small></a><span class="preview-chip">Preview · payments disabled</span></header>
+    <main class="payment-shell">
+      <a class="back-link" href="/booking.html">← Back to your visit plan</a>
+      <section class="payment-hero">
+        <p class="eyebrow">Your booking journey</p>
+        <h1>Pay securely,<br><em>once your visit is confirmed.</em></h1>
+        <p>After the farm confirms your date and price, it plans to send a Cashfree hosted payment link for the agreed advance.</p>
+      </section>
+      <section class="payment-card" aria-labelledby="setup-title">
+        <div class="payment-card__status"><span class="status-pulse"></span>Setup pending</div>
+        <h2 id="setup-title">Cashfree payment setup is pending</h2>
+        <p>The merchant account and live booking connection are not active yet. No payment is due through this preview.</p>
+        <div class="payment-details">
+          <div><span>Payment provider</span><strong>Cashfree · planned</strong></div>
+          <div><span>Payment type</span><strong>Hosted payment link</strong></div>
+          <div><span>Amount</span><strong>Shown only for a live reservation</strong></div>
+          <div><span>Booking reference</span><strong>Not created in preview</strong></div>
+        </div>
+        <div class="payment-qr" aria-label="Payment link placeholder"><span>₹</span><small>Your payment link will be shared<br>after the farm confirms your visit</small></div>
+        <button class="button button--primary payment-disabled" type="button" disabled>Payment unavailable in preview</button>
+        <p class="payment-trust"><strong>Please wait for a confirmed payment link.</strong> The farm will confirm your date, amount, and advance before requesting payment.</p>
+      </section>
+      <section class="payment-status-guide">
+        <div><p class="eyebrow">Know where you stand</p><h2>Every step, clearly marked.</h2><p>Status changes only after the relevant action is recorded.</p></div>
+        <ol>
+          <li><b>01</b><span><strong>Awaiting payment</strong><small>Live instructions are ready; your reservation hold is active.</small></span><i>Pending</i></li>
+          <li><b>02</b><span><strong>Payment processing</strong><small>Cashfree securely processes the payment through its hosted checkout.</small></span><i>Payment</i></li>
+          <li><b>03</b><span><strong>Confirmed</strong><small>The payment status is verified before the farm confirms your booking.</small></span><i>Verified</i></li>
+          <li><b>04</b><span><strong>Expired or cancelled</strong><small>The hold or cancellation has a separate status.</small></span><i>Booking</i></li>
+          <li><b>05</b><span><strong>Refund requested</strong><small>Eligibility and amount follow the policy saved with your booking.</small></span><i>Refund</i></li>
+        </ol>
+      </section>
+      <p class="payment-return">Want to explore first? <a href="/index.html">Return to the farm</a></p>
+    </main>
+  </body>
+</html>
