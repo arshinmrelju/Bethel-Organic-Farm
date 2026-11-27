@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <pattern id="fish-h1" width="3.5" height="3.5" patternUnits="userSpaceOnUse" patternTransform="rotate(34)">
+      <line x1="0" y1="0" x2="0" y2="3.5" stroke="#17382C" stroke-width="0.95" stroke-opacity="0.75"/>
+    </pattern>
+    <pattern id="fish-h2" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(-32)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#17382C" stroke-width="1.1" stroke-opacity="0.9"/>
+      <line x1="0" y1="0" x2="3" y2="0" stroke="#17382C" stroke-width="0.7" stroke-opacity="0.65"/>
+    </pattern>
+    <pattern id="fish-scales" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 6 C3.5 1.5 8.5 1.5 12 6 M-6 12 C-2.5 7.5 2.5 7.5 6 12 M6 12 C9.5 7.5 14.5 7.5 18 12" stroke="#17382C" stroke-width="1.2" stroke-opacity="0.9" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- Dorsal fin -->
+  <path d="M148 156 C162 112 202 100 248 110 C256 124 252 146 244 162 Z" fill="url(#fish-h1)" stroke="#17382C" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M156 154 L164 120 M166 154 L175 116 M176 154 L186 113 M186 155 L198 111 M196 156 L210 110 M206 156 L221 111 M216 158 L231 113 M226 159 L240 116 M236 160 L247 120" stroke="#17382C" stroke-width="1.1" stroke-linecap="round"/>
+
+  <!-- Anal & pelvic fins -->
+  <path d="M236 238 C246 266 268 276 284 266 C280 250 270 236 258 232 Z" fill="url(#fish-h1)" stroke="#17382C" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M242 236 L254 265 M250 236 L263 267 M258 235 L272 265 M266 234 L278 260" stroke="#17382C" stroke-width="1"/>
+  <path d="M152 246 C158 272 178 282 194 274 C188 260 178 248 168 244 Z" fill="url(#fish-h1)" stroke="#17382C" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M158 246 L168 272 M166 246 L178 274 M174 246 L186 272" stroke="#17382C" stroke-width="1"/>
+
+  <!-- Caudal (tail) fin -->
+  <path d="M286 184 C314 162 342 140 364 138 C350 164 344 184 342 200 C344 218 352 240 364 262 C340 260 314 238 286 214 Z" fill="url(#fish-h1)" stroke="#17382C" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M294 186 L358 144 M294 190 L352 156 M294 194 L346 170 M294 198 L342 184 M294 202 L342 198 M294 206 L344 212 M294 210 L348 228 M294 213 L354 244 M294 215 L360 256" stroke="#17382C" stroke-width="1.05" stroke-linecap="round"/>
+
+  <!-- Main fish body -->
+  <path d="M38 202 C54 172 96 148 156 146 C214 144 260 166 294 186 L294 214 C258 234 210 254 156 252 C98 250 56 228 38 202 Z" fill="#FFFFFF" stroke="#17382C" stroke-width="2.3" stroke-linejoin="round"/>
+
+  <!-- Dorsal ridge deep cross-hatching + overlapping scales -->
+  <path d="M108 158 C154 146 218 152 290 187 L290 202 C226 194 162 194 112 188 Z" fill="url(#fish-h2)"/>
+  <path d="M116 156 C166 148 226 158 286 188 L286 212 C226 242 166 250 116 242 C128 214 128 184 116 156 Z" fill="url(#fish-scales)"/>
+  <!-- Belly contour hatching -->
+  <path d="M116 226 C160 244 218 244 282 214 C252 238 206 250 156 248 C136 246 124 238 116 226 Z" fill="url(#fish-h1)"/>
+
+  <!-- Lateral line -->
+  <path d="M124 192 C172 198 228 200 286 199" stroke="#17382C" stroke-width="1.35" stroke-dasharray="3.5 2.5"/>
+
+  <!-- Gill plate & head engraving -->
+  <path d="M112 154 C128 180 128 220 112 244" stroke="#17382C" stroke-width="2.1" stroke-linecap="round"/>
+  <path d="M98 162 C112 184 112 216 98 238" stroke="#17382C" stroke-width="1.4" stroke-linecap="round"/>
+  <path d="M48 188 C68 164 94 156 116 156 C122 174 122 190 116 202 C92 198 68 194 48 188 Z" fill="url(#fish-h2)" opacity="0.7"/>
+  <path d="M56 212 C74 224 94 232 114 234 L112 216 C92 216 74 214 56 212 Z" fill="url(#fish-h1)"/>
+
+  <!-- Eye, mouth & barbels -->
+  <circle cx="76" cy="189" r="11" fill="#FFFFFF" stroke="#17382C" stroke-width="2"/>
+  <circle cx="76" cy="189" r="6.5" fill="#17382C"/>
+  <circle cx="73.5" cy="186.5" r="2.2" fill="#FFFFFF"/>
+  <path d="M39 202 C48 206 58 205 66 200" stroke="#17382C" stroke-width="1.7" stroke-linecap="round"/>
+  <path d="M44 206 C40 216 34 222 28 224 M52 208 C50 216 46 223 42 226" stroke="#17382C" stroke-width="1.3" stroke-linecap="round"/>
+
+  <!-- Pectoral fin -->
+  <path d="M116 214 C138 210 162 222 168 244 C150 252 128 244 116 226 Z" fill="#FFFFFF" stroke="#17382C" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M116 214 C138 210 162 222 168 244 C150 252 128 244 116 226 Z" fill="url(#fish-h1)"/>
+  <path d="M120 218 L158 232 M120 222 L156 238 M120 226 L148 243" stroke="#17382C" stroke-width="1.1"/>
+</svg>

@@ -271,7 +271,10 @@ h3 { margin-bottom: var(--space-3); font-size: var(--text-xl); letter-spacing: -
 .breed-card::after { content: attr(data-index); position: absolute; right: .7rem; bottom: .55rem; color: rgb(16 39 31 / 7%); font-family: var(--font-display); font-size: clamp(2.6rem, 3.6vw, 3.4rem); line-height: .85; letter-spacing: -.05em; pointer-events: none; }
 .breed-card:hover { transform: translateY(-6px); border-color: rgb(16 39 31 / 45%); box-shadow: 0 18px 34px rgb(36 45 35 / 12%); }
 .breed-card__index { color: var(--color-gold-500); font-size: .68rem; font-weight: 650; letter-spacing: .16em; }
-.breed-card__name { position: relative; margin-block: auto; padding-bottom: .8rem; color: var(--color-forest-900); font-family: var(--font-display); font-size: clamp(1.05rem, 1.5vw, 1.3rem); font-weight: 400; letter-spacing: -.01em; line-height: 1.15; }
+.breed-card__art { display: grid; flex: 1 1 auto; min-height: 0; place-items: center; padding: .4rem .15rem; }
+.breed-card__engraving { width: 100%; height: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; filter: brightness(1.05) contrast(1.12); opacity: .92; pointer-events: none; transition: transform var(--duration-normal) var(--ease-standard), opacity var(--duration-normal) var(--ease-standard); }
+.breed-card:hover .breed-card__engraving { transform: scale(1.045); opacity: 1; }
+.breed-card__name { position: relative; z-index: 1; margin: .25rem 0 0; padding-bottom: .65rem; color: var(--color-forest-900); font-family: var(--font-display); font-size: clamp(1.05rem, 1.5vw, 1.3rem); font-weight: 400; letter-spacing: -.01em; line-height: 1.15; }
 .breed-card__name::after { content: ""; position: absolute; bottom: 0; left: 0; width: 22px; height: 1px; background: rgb(173 139 81 / 65%); }
 .breed-card:hover .breed-card__name { color: var(--color-earth-700); }
 @media (max-width: 900px) {

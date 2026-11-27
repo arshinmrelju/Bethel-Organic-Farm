@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <pattern id="rab-h1" width="3.5" height="3.5" patternUnits="userSpaceOnUse" patternTransform="rotate(36)">
+      <line x1="0" y1="0" x2="0" y2="3.5" stroke="#17382C" stroke-width="0.95" stroke-opacity="0.78"/>
+    </pattern>
+    <pattern id="rab-h2" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#17382C" stroke-width="1.05" stroke-opacity="0.88"/>
+      <line x1="0" y1="0" x2="3" y2="0" stroke="#17382C" stroke-width="0.65" stroke-opacity="0.58"/>
+    </pattern>
+    <pattern id="rab-h3" width="2.8" height="2.8" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+      <line x1="0" y1="0" x2="0" y2="2.8" stroke="#17382C" stroke-width="1.2" stroke-opacity="0.95"/>
+      <line x1="0" y1="0" x2="2.8" y2="0" stroke="#17382C" stroke-width="1" stroke-opacity="0.85"/>
+    </pattern>
+  </defs>
+
+  <!-- Far ear -->
+  <path d="M234 128 C236 90 247 64 259 56 C267 66 264 98 250 130 Z" fill="url(#rab-h3)" stroke="#17382C" stroke-width="1.9" stroke-linejoin="round"/>
+
+  <!-- Fluffy tail -->
+  <path d="M88 266 C66 264 54 278 58 294 C62 308 78 313 94 306 Z" fill="#FFFFFF" stroke="#17382C" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M82 270 C68 272 62 284 65 298 C70 306 82 308 92 302 Z" fill="url(#rab-h1)"/>
+  <path d="M76 272 C68 278 66 290 71 300 M85 274 C78 282 77 294 81 303" stroke="#17382C" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Main rabbit silhouette (facing right) -->
+  <path d="M254 134 C272 134 290 144 302 158 C310 166 314 176 311 184 C308 190 298 194 288 197 C286 203 280 209 272 212 C282 224 288 242 284 264 C281 282 273 300 266 316 C272 320 274 328 266 332 L244 332 C240 326 242 318 246 310 C248 294 248 278 244 268 C234 284 222 298 214 314 C222 318 232 322 234 328 C235 334 224 336 206 336 L158 336 C136 336 116 330 104 318 C88 302 84 274 92 246 C100 218 122 188 156 168 C184 152 214 140 236 136 Z" fill="#FFFFFF" stroke="#17382C" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Near ear -->
+  <path d="M222 138 C209 96 208 62 221 50 C234 57 243 94 244 134 Z" fill="#FFFFFF" stroke="#17382C" stroke-width="2.1" stroke-linejoin="round"/>
+  <path d="M221 56 C214 78 215 104 224 132 L238 130 C239 102 234 72 221 56 Z" fill="url(#rab-h1)"/>
+  <path d="M222 68 C218 86 220 108 228 128 C234 114 235 90 227 68 Z" fill="url(#rab-h3)" stroke="#17382C" stroke-width="1.1"/>
+
+  <!-- Sculptural copperplate tonal layers -->
+  <path d="M126 186 C158 164 202 150 248 150 C272 152 292 168 296 186 C280 198 264 210 246 222 C234 252 218 286 204 328 L138 330 C104 320 90 288 94 252 C98 224 110 202 126 186 Z" fill="url(#rab-h1)" opacity="0.72"/>
+  <path d="M100 246 C90 278 98 314 128 328 C154 336 188 334 212 328 C196 318 188 298 192 270 C198 240 182 214 152 210 C128 208 110 222 100 246 Z" fill="url(#rab-h2)"/>
+  <path d="M96 276 C94 302 108 322 134 330 C160 336 188 334 206 328 C176 322 146 308 124 288 C110 276 102 272 96 276 Z" fill="url(#rab-h3)"/>
+  <path d="M244 268 C252 284 256 304 252 328 L266 328 C272 308 278 286 280 264 C274 244 264 232 252 226 C246 240 244 256 244 268 Z" fill="url(#rab-h2)"/>
+
+  <!-- Dense directional fur engraving strokes -->
+  <path d="M160 168 C178 160 198 158 218 160 M142 180 C162 172 184 170 208 174 M126 194 C148 186 172 184 196 190 M114 210 C138 202 164 202 186 210 M104 230 C128 222 156 222 178 232" stroke="#17382C" stroke-width="1.05" stroke-linecap="round"/>
+  <path d="M98 250 C120 242 146 244 168 256 M96 270 C116 264 142 268 162 280 M98 290 C118 286 142 290 162 302 M108 308 C128 308 152 312 172 320" stroke="#17382C" stroke-width="1.0" stroke-linecap="round"/>
+  <!-- Haunch contour -->
+  <path d="M156 214 C184 220 200 244 196 272 C192 294 178 308 160 314" stroke="#17382C" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Forelimb & paw strokes -->
+  <path d="M248 226 C256 248 258 282 252 316 M256 232 C264 252 264 284 258 316 M264 240 C270 260 270 288 264 316" stroke="#17382C" stroke-width="1.05" stroke-linecap="round"/>
+  <path d="M250 326 L252 332 M258 326 L260 332 M214 328 L216 336 M222 328 L224 335" stroke="#17382C" stroke-width="1.1" stroke-linecap="round"/>
+
+  <!-- Head, eye, nose & whiskers -->
+  <path d="M242 162 C252 172 260 182 270 190 M246 174 C256 184 266 192 278 196 M252 186 C262 194 272 200 282 202 M260 144 C274 146 286 150 296 158" stroke="#17382C" stroke-width="0.95" stroke-linecap="round"/>
+  <path d="M268 158 C276 154 284 156 287 163 C283 169 273 169 268 163 Z" fill="#17382C"/>
+  <circle cx="279" cy="161" r="1.9" fill="#FFFFFF"/>
+  <path d="M266 152 C274 148 283 149 289 155" stroke="#17382C" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M304 174 C309 174 312 178 308 182 C304 184 300 180 304 174 Z" fill="#17382C"/>
+  <path d="M294 191 C300 190 305 188 308 184" stroke="#17382C" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M296 182 C316 178 334 179 348 184 M296 185 C318 186 336 190 350 196 M294 188 C312 193 328 200 340 208" stroke="#17382C" stroke-width="0.9" stroke-linecap="round"/>
+</svg>

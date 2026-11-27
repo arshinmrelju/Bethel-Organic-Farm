@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <pattern id="par-h1" width="3.5" height="3.5" patternUnits="userSpaceOnUse" patternTransform="rotate(34)">
+      <line x1="0" y1="0" x2="0" y2="3.5" stroke="#17382C" stroke-width="0.95" stroke-opacity="0.78"/>
+    </pattern>
+    <pattern id="par-h2" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(-38)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#17382C" stroke-width="1.05" stroke-opacity="0.88"/>
+      <line x1="0" y1="0" x2="3" y2="0" stroke="#17382C" stroke-width="0.65" stroke-opacity="0.58"/>
+    </pattern>
+    <pattern id="par-h3" width="2.8" height="2.8" patternUnits="userSpaceOnUse" patternTransform="rotate(26)">
+      <line x1="0" y1="0" x2="0" y2="2.8" stroke="#17382C" stroke-width="1.2" stroke-opacity="0.95"/>
+      <line x1="0" y1="0" x2="2.8" y2="0" stroke="#17382C" stroke-width="1" stroke-opacity="0.85"/>
+    </pattern>
+  </defs>
+
+  <!-- Perched branch & leaves -->
+  <path d="M72 268 C132 260 206 254 282 252 C304 252 324 256 342 264" stroke="#17382C" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M72 268 C132 260 206 254 282 252 C304 252 324 256 342 264" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M108 265 L140 262 M170 257 L204 255 M264 254 L296 254" stroke="#17382C" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M294 252 C310 238 326 226 342 216" stroke="#17382C" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M316 234 C312 218 322 204 336 202 C338 218 328 230 316 234 Z" fill="url(#par-h2)" stroke="#17382C" stroke-width="1.5"/>
+  <path d="M316 234 L334 204" stroke="#17382C" stroke-width="1.1"/>
+  <path d="M326 246 C338 238 352 242 358 252 C346 258 334 254 326 246 Z" fill="url(#par-h2)" stroke="#17382C" stroke-width="1.5"/>
+
+  <!-- Long tapered tail feathers -->
+  <path d="M178 232 C162 268 136 318 110 364 C128 346 154 304 188 242 Z" fill="url(#par-h3)" stroke="#17382C" stroke-width="1.9" stroke-linejoin="round"/>
+  <path d="M188 236 C176 274 160 318 144 352 C160 332 180 286 200 242 Z" fill="url(#par-h2)" stroke="#17382C" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M124 344 L182 240 M152 336 L194 242" stroke="#17382C" stroke-width="1.1"/>
+
+  <!-- Main parrot body & head -->
+  <path d="M226 62 C244 60 258 72 260 90 C262 106 254 118 250 128 C258 144 260 170 250 198 C242 222 224 240 202 246 C192 248 182 246 176 238 C172 220 176 186 190 150 C198 130 206 112 204 94 C202 74 210 64 226 62 Z" fill="#FFFFFF" stroke="#17382C" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- Head, neck & chest shading -->
+  <path d="M206 72 C216 64 234 62 248 70 C236 80 226 98 224 118 C214 114 206 104 204 90 C203 82 204 76 206 72 Z" fill="url(#par-h1)"/>
+  <path d="M236 124 C256 144 258 176 246 204 C236 226 220 242 198 246 C214 228 228 198 232 168 C236 148 236 134 236 124 Z" fill="url(#par-h2)"/>
+  <path d="M244 146 C248 164 246 186 236 208 M236 154 C238 174 234 196 224 218 M228 166 C228 184 224 204 214 224" stroke="#17382C" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Neck collar ring -->
+  <path d="M205 112 C218 123 236 124 251 116" stroke="#17382C" stroke-width="3" stroke-linecap="round"/>
+  <path d="M204 118 C218 128 236 129 251 122" stroke="#17382C" stroke-width="1.3" stroke-linecap="round"/>
+
+  <!-- Wing with rich covert & flight feather cross-hatching -->
+  <path d="M206 130 C222 142 226 176 212 212 C200 242 180 264 162 276 C164 242 174 196 192 152 C196 142 200 134 206 130 Z" fill="#FFFFFF" stroke="#17382C" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M204 134 C218 148 222 180 208 216 C196 244 178 264 164 274 C166 244 178 196 204 134 Z" fill="url(#par-h2)"/>
+  <path d="M188 188 C200 198 208 202 214 206 C202 238 182 260 164 274 C168 246 176 216 188 188 Z" fill="url(#par-h3)"/>
+  <path d="M190 154 C200 160 208 158 214 150 M186 168 C198 174 208 172 216 164 M182 182 C194 188 206 186 214 178" stroke="#17382C" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M180 200 L200 228 M174 216 L192 242 M170 232 L184 254" stroke="#17382C" stroke-width="1.15" stroke-linecap="round"/>
+
+  <!-- Hooked parrot beak & cere -->
+  <path d="M254 74 C268 72 280 82 280 96 C280 104 276 110 272 112 C272 102 266 96 254 96 Z" fill="url(#par-h2)" stroke="#17382C" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M254 96 C264 96 270 100 268 106 C262 108 256 104 252 98 Z" fill="url(#par-h3)" stroke="#17382C" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="258" cy="79" r="1.5" fill="#17382C"/>
+
+  <!-- Eye & crown lines -->
+  <circle cx="241" cy="84" r="5.2" fill="#FFFFFF" stroke="#17382C" stroke-width="1.6"/>
+  <circle cx="241" cy="84" r="3" fill="#17382C"/>
+  <circle cx="240" cy="83" r="1.1" fill="#FFFFFF"/>
+  <path d="M214 74 C222 70 232 68 242 70 M210 84 C218 78 226 76 232 78 M208 94 C216 90 224 90 232 94" stroke="#17382C" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Perched feet gripping the branch -->
+  <path d="M210 242 C210 250 208 258 206 262 C210 264 214 262 215 256 M218 242 C220 250 220 258 218 262 C222 264 226 262 226 255" stroke="#17382C" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M206 262 C205 266 208 268 211 266 M218 262 C218 266 221 268 224 266" stroke="#17382C" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
