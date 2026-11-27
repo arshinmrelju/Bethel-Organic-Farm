@@ -17,6 +17,8 @@ export const MESSAGES = Object.freeze({
     "booking.step.visit": "Visit", "booking.step.experiences": "Experiences", "booking.step.details": "Your details", "booking.step.review": "Review",
     "visit.stay": "Stay", "visit.day": "Day visit", "visit.camping": "Camping", "visit.activities": "Experiences", "booking.finish": "Finish preview", "booking.selectDate": "Select a date", "booking.chooseVisit": "Choose a visit", "booking.noExperiences": "None selected", "booking.food": "Restaurant / grill enquiry", "booking.notRequested": "Not requested",
     "guest.adult": "adult", "guest.adults": "adults", "guest.child": "child", "guest.children": "children", "activity.walks": "Trekking & nature walks", "activity.tour": "Farm tours", "activity.picnic": "Riverside picnic", "activity.bbq": "Outdoor BBQ", "activity.bonfire": "Bonfire evening", "activity.kids": "Kids activities", "activity.photo": "Photography experience", "activity.camping": "Camping",
+    "animals.eyebrow": "Meet the farm", "animals.title": "Get to know our breeds.", "animals.lead": "Ten kinds of animals share this land with us — from the pigs that started it all to the birds in the aviary.", "animals.cta": "Plan a farm visit", "animals.prev": "Previous animals", "animals.next": "Next animals", "animals.strip": "Animals on the farm",
+    "animals.name.pigs": "Pigs", "animals.name.cows": "Cows", "animals.name.goats": "Goats", "animals.name.chickens": "Chickens", "animals.name.ducks": "Ducks", "animals.name.rabbits": "Rabbits", "animals.name.dogs": "Dogs & cats", "animals.name.fish": "Fish", "animals.name.horse": "Horse", "animals.name.parrots": "Parrots",
   },
   ml: {
     "language.label": "ഭാഷ", "language.note": "ഫാമിനെയും നയങ്ങളെയും കുറിച്ചുള്ള ചില വിവരങ്ങൾ ഉടമ പരിശോധിച്ച വിവർത്തനങ്ങൾ തയ്യാറാകുന്നതുവരെ ഇംഗ്ലീഷിൽ ലഭ്യമാണ്.",
@@ -29,6 +31,8 @@ export const MESSAGES = Object.freeze({
     "booking.step.visit": "സന്ദർശനം", "booking.step.experiences": "അനുഭവങ്ങൾ", "booking.step.details": "നിങ്ങളുടെ വിവരങ്ങൾ", "booking.step.review": "പരിശോധന",
     "visit.stay": "താമസം", "visit.day": "ഒരു ദിവസത്തെ സന്ദർശനം", "visit.camping": "ക്യാമ്പിംഗ്", "visit.activities": "അനുഭവങ്ങൾ", "booking.finish": "പ്രിവ്യൂ പൂർത്തിയാക്കുക", "booking.selectDate": "തീയതി തിരഞ്ഞെടുക്കുക", "booking.chooseVisit": "സന്ദർശന തരം തിരഞ്ഞെടുക്കുക", "booking.noExperiences": "ഒന്നും തിരഞ്ഞെടുത്തിട്ടില്ല", "booking.food": "റെസ്റ്റോറന്റ് / ഗ്രിൽ അന്വേഷണം", "booking.notRequested": "ആവശ്യപ്പെട്ടിട്ടില്ല",
     "guest.adult": "മുതിർന്നവർ", "guest.adults": "മുതിർന്നവർ", "guest.child": "കുട്ടി", "guest.children": "കുട്ടികൾ", "activity.walks": "ട്രെക്കിംഗും പ്രകൃതി നടത്തവും", "activity.tour": "ഫാം സന്ദർശനം", "activity.picnic": "നദീതീര പിക്നിക്", "activity.bbq": "ഔട്ട്ഡോർ BBQ", "activity.bonfire": "ബോൺഫയർ സായാഹ്നം", "activity.kids": "കുട്ടികളുടെ പ്രവർത്തനങ്ങൾ", "activity.photo": "ഫോട്ടോഗ്രഫി അനുഭവം", "activity.camping": "ക്യാമ്പിംഗ്",
+    "animals.eyebrow": "ഫാമിനെ പരിചയപ്പെടാം", "animals.title": "ഞങ്ങളുടെ ഇനങ്ങളെ അറിയൂ.", "animals.lead": "പത്ത് തരം മൃഗങ്ങൾ ഈ മണ്ണ് ഞങ്ങളോടൊപ്പം പങ്കിടുന്നു — തുടക്കമിട്ട പന്നികൾ മുതൽ കൂട്ടിലെ പക്ഷികൾ വരെ.", "animals.cta": "ഒരു ഫാം സന്ദർശനം ആസൂത്രണം ചെയ്യുക", "animals.prev": "മുൻ മൃഗങ്ങൾ", "animals.next": "അടുത്ത മൃഗങ്ങൾ", "animals.strip": "ഫാമിലെ മൃഗങ്ങൾ",
+    "animals.name.pigs": "പന്നികൾ", "animals.name.cows": "പശുക്കൾ", "animals.name.goats": "ആടുകൾ", "animals.name.chickens": "കോഴികൾ", "animals.name.ducks": "താറാവുകൾ", "animals.name.rabbits": "മുയലുകൾ", "animals.name.dogs": "നായ്ക്കളും പൂച്ചകളും", "animals.name.fish": "മത്സ്യങ്ങൾ", "animals.name.horse": "കുതിര", "animals.name.parrots": "തത്തകൾ",
   },
   ta: {
     "language.label": "மொழி", "language.note": "பண்ணை மற்றும் கொள்கை விவரங்களில் சில, உரிமையாளர் சரிபார்த்த மொழிபெயர்ப்புகள் தயாராகும் வரை ஆங்கிலத்தில் இருக்கும்.",
@@ -41,6 +45,8 @@ export const MESSAGES = Object.freeze({
     "booking.step.visit": "வருகை", "booking.step.experiences": "அனுபவங்கள்", "booking.step.details": "உங்கள் விவரங்கள்", "booking.step.review": "மதிப்பாய்வு",
     "visit.stay": "தங்குமிடம்", "visit.day": "ஒருநாள் வருகை", "visit.camping": "முகாமிடுதல்", "visit.activities": "அனுபவங்கள்", "booking.finish": "முன்னோட்டத்தை முடிக்கவும்", "booking.selectDate": "தேதியைத் தேர்ந்தெடுக்கவும்", "booking.chooseVisit": "வருகை வகையைத் தேர்ந்தெடுக்கவும்", "booking.noExperiences": "எதுவும் தேர்ந்தெடுக்கப்படவில்லை", "booking.food": "உணவகம் / கிரில் விசாரணை", "booking.notRequested": "கோரப்படவில்லை",
     "guest.adult": "வயது வந்தவர்", "guest.adults": "வயது வந்தோர்", "guest.child": "குழந்தை", "guest.children": "குழந்தைகள்", "activity.walks": "மலைநடை மற்றும் இயற்கை நடை", "activity.tour": "பண்ணைச் சுற்றுலா", "activity.picnic": "ஆற்றங்கரை சுற்றுலா", "activity.bbq": "வெளிப்புற BBQ", "activity.bonfire": "நெருப்பைச் சுற்றிய மாலை", "activity.kids": "குழந்தைகளுக்கான செயல்பாடுகள்", "activity.photo": "புகைப்பட அனுபவம்", "activity.camping": "முகாமிடுதல்",
+    "animals.eyebrow": "பண்ணையை அறியுங்கள்", "animals.title": "எங்கள் இனங்களை அறியுங்கள்.", "animals.lead": "பத்து வகை விலங்குகள் இந்த நிலத்தை எங்களுடன் பகிர்ந்து கொள்கின்றன — தொடங்கி வைத்த பன்றிகள் முதல் கூண்டுப் பறவைகள் வரை.", "animals.cta": "பண்ணை வருகையைத் திட்டமிடுங்கள்", "animals.prev": "முந்தைய விலங்குகள்", "animals.next": "அடுத்த விலங்குகள்", "animals.strip": "பண்ணையில் உள்ள விலங்குகள்",
+    "animals.name.pigs": "பன்றிகள்", "animals.name.cows": "பசுக்கள்", "animals.name.goats": "ஆடுகள்", "animals.name.chickens": "கோழிகள்", "animals.name.ducks": "வாத்துகள்", "animals.name.rabbits": "முயல்கள்", "animals.name.dogs": "நாய்களும் பூனைகளும்", "animals.name.fish": "மீன்கள்", "animals.name.horse": "குதிரை", "animals.name.parrots": "கிளிகள்",
   },
   hi: {
     "language.label": "भाषा", "language.note": "मालिक द्वारा जाँचे गए अनुवाद तैयार होने तक खेत और नीतियों की कुछ जानकारी अंग्रेज़ी में उपलब्ध है।",
@@ -53,6 +59,8 @@ export const MESSAGES = Object.freeze({
     "booking.step.visit": "यात्रा", "booking.step.experiences": "अनुभव", "booking.step.details": "आपकी जानकारी", "booking.step.review": "समीक्षा",
     "visit.stay": "ठहरना", "visit.day": "दिन की यात्रा", "visit.camping": "कैंपिंग", "visit.activities": "अनुभव", "booking.finish": "प्रीव्यू पूरा करें", "booking.selectDate": "तारीख चुनें", "booking.chooseVisit": "यात्रा का प्रकार चुनें", "booking.noExperiences": "कुछ भी नहीं चुना", "booking.food": "रेस्तराँ / ग्रिल पूछताछ", "booking.notRequested": "अनुरोध नहीं किया",
     "guest.adult": "वयस्क", "guest.adults": "वयस्क", "guest.child": "बच्चा", "guest.children": "बच्चे", "activity.walks": "ट्रेकिंग और प्रकृति की सैर", "activity.tour": "फ़ार्म भ्रमण", "activity.picnic": "नदी किनारे पिकनिक", "activity.bbq": "आउटडोर BBQ", "activity.bonfire": "अलाव की शाम", "activity.kids": "बच्चों की गतिविधियाँ", "activity.photo": "फ़ोटोग्राफ़ी अनुभव", "activity.camping": "कैंपिंग",
+    "animals.eyebrow": "फ़ार्म से मिलिए", "animals.title": "हमारी नस्लों को जानिए।", "animals.lead": "दस तरह के जानवर इस ज़मीन को हमारे साथ साझा करते हैं — शुरुआत करने वाले सूअरों से लेकर अवियरी के पक्षियों तक।", "animals.cta": "फ़ार्म यात्रा की योजना बनाएँ", "animals.prev": "पिछले जानवर", "animals.next": "अगले जानवर", "animals.strip": "फ़ार्म के जानवर",
+    "animals.name.pigs": "सूअर", "animals.name.cows": "गायें", "animals.name.goats": "बकरियाँ", "animals.name.chickens": "मुर्गियाँ", "animals.name.ducks": "बत्तखें", "animals.name.rabbits": "खरगोश", "animals.name.dogs": "कुत्ते और बिल्लियाँ", "animals.name.fish": "मछलियाँ", "animals.name.horse": "घोड़ा", "animals.name.parrots": "तोते",
   },
 });
 
@@ -96,7 +104,7 @@ export function initializeI18n() {
   const existing = document.querySelector("[data-language-select]");
   let selector = existing;
   if (!selector) {
-    const header = document.querySelector(".site-nav") ?? document.querySelector(".payment-top") ?? document.querySelector(".booking-header") ?? document.querySelector(".admin-topbar");
+    const header = document.querySelector(".site-header") ?? document.querySelector(".payment-top") ?? document.querySelector(".admin-topbar");
     if (header) {
       const wrap = document.createElement("label");
       wrap.className = "language-switch";
